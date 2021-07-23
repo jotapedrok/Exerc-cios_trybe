@@ -1,22 +1,6 @@
-h1, p{
-    text-align: center;
+div:hover{ 
+    border: 15px solid gray;
 }
-#bigtxt:hover{
-    background-color: cadetblue;
-    padding: auto;
-    margin-right: 87%;
-}
-li:hover{
-    background-color: cadetblue;
-    padding: auto;
-    margin-right: 90%;
-}
-li:active{
-    font-family: 'Times New Roman', Times, serif;
-}
-body{
-    font-family: monospace;
-}
-ul, ol{
-    list-style: none;
+#cor-primaria{
+    background-color: blue;
 }
