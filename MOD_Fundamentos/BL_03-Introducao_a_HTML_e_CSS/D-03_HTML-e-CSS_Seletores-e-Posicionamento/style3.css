@@ -22,3 +22,25 @@ li em{
 #div3first{
     color: blue
 }
+.java{
+    background-color: pink;
+    max-width: 500px;
+}
+.aliadosli:hover{
+    font-weight: bold;
+}
+#devmozilla:hover{
+    color: blue;
+}
+#stackoverflow:hover{
+    color: orange;
+}
+#w3s:hover{
+    color: greenyellow;
+}
+#devdocs:hover{
+    color: gray;
+}
+#betrybe:hover{
+    color: green;
+}
