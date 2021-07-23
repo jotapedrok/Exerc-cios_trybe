@@ -1,5 +1,13 @@
 div:hover{ 
-    border: 15px solid gray;
+    border: 10px solid gray;
+}
+body{
+    font-size: 35px;
+}
+h3{
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
 }
 #cor-primaria{
     background-color: blue;
@@ -9,7 +17,8 @@ div:hover{
 }
 #cor-complementar{
     background-color: orange;
-    font-size: 27px;
+    font-size: 55px;
+   
 }
 #cor-escura{
     background-color: darkblue;
@@ -17,8 +26,6 @@ div:hover{
 #cor-clara{
     background-color: cyan;
 }
-h3{
-    font-family: monospace;
-    font-weight: bold;
-    text-align: center;
+.imparh3{
+    font-style: italic;
 }
