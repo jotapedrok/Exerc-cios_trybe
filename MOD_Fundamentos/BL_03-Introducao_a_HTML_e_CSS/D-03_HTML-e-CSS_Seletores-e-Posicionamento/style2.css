@@ -26,9 +26,10 @@
   
   .speach {
     font-size: 18px;
+    font-weight: bold;
     position: absolute;
     z-index: 4;
-    left: 265px;
+    left: 260px;
     top: 180px;
   }
   
