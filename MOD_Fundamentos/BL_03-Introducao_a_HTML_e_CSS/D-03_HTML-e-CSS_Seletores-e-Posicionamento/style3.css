@@ -1,6 +1,11 @@
 h1, p{
     text-align: center;
 }
+#bigtxt:hover{
+    background-color: cadetblue;
+    padding: auto;
+    margin-right: 87%;
+}
 li:hover{
     background-color: cadetblue;
     padding: auto;
@@ -11,4 +16,7 @@ li:active{
 }
 body{
     font-family: monospace;
+}
+ul, ol{
+    list-style: none;
 }
