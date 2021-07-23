@@ -4,5 +4,11 @@ h1, p{
 li:hover{
     background-color: cadetblue;
     padding: auto;
-    margin-right: 95%;
+    margin-right: 90%;
+}
+li:active{
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    font-family: monospace;
 }
