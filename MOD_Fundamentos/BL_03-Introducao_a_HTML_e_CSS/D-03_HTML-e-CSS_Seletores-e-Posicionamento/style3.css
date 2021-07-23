@@ -1,0 +1,46 @@
+ol{
+    background-color: rgb(255, 255, 106);
+}
+.olpar {
+    color: green;
+}
+.olimpar{
+    text-transform: uppercase;
+}
+h1, h2, h3{
+    color: red;
+}
+h1, h2, h3 em{
+    font-size: 40px;
+}
+li{
+    font-size: 20px;
+}
+li em{
+    font-weight: bold;
+}
+#div3first{
+    color: blue
+}
+.java{
+    background-color: pink;
+    max-width: 500px;
+}
+.aliadosli:hover{
+    font-weight: bold;
+}
+#devmozilla:hover{
+    color: blue;
+}
+#stackoverflow:hover{
+    color: orange;
+}
+#w3s:hover{
+    color: greenyellow;
+}
+#devdocs:hover{
+    color: gray;
+}
+#betrybe:hover{
+    color: green;
+}
