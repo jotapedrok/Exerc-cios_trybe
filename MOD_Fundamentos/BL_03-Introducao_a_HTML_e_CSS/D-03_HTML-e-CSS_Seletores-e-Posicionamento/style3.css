@@ -4,3 +4,21 @@ div:hover{
 #cor-primaria{
     background-color: blue;
 }
+#cor-secundaria{
+    background-color: yellow;
+}
+#cor-complementar{
+    background-color: orange;
+    font-size: 27px;
+}
+#cor-escura{
+    background-color: darkblue;
+}
+#cor-clara{
+    background-color: cyan;
+}
+h3{
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+}
