@@ -8,6 +8,8 @@ h1 {
     height: 50px;
     text-align: center;
     width: 200px;
+    display: block;
+    margin-left: 95px;
   }
 
   .second {
@@ -15,7 +17,7 @@ h1 {
     font-size: 20px;
     height: 50px;
     text-align: center;
-    width: 300px;
+    width: 200px;
   }
 
   .third {
@@ -23,5 +25,8 @@ h1 {
     font-size: 20px;
     height: 50px;
     text-align: center;
-    width: 300px;
+    width: 200px;
   }
+.second, .third {
+    display: inline-block;
+}
