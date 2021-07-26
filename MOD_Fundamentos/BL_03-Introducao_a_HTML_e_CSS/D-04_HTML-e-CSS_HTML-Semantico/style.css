@@ -1,6 +1,6 @@
 body {
     margin: 0 0 0 0;
-    background-color: #BEC7C7;
+    background-color: #06111C;
     font-family: sans-serif;
 }
 main{
@@ -10,24 +10,27 @@ main{
     width: 400px;
     margin: 15px 15px 15px 15px;
 }
-header{
-    background-color: #FFEB4D;
-    margin: 0px 0px 0px 0px;
-}
 #lower{
     font-size: 30px;
 }
 .navigation li{
-    margin: 0px 10px 0px 10px;
-    background-color: #BB2020;
+    margin: 0px 20px 0px 20px;
+    text-align: center;
+    background-color: #BEC7C7;
     display: inline;
+    font-size: 20px;
+    font-weight: bold;
 }
 .bg-nav {
-    background-color: #BB2020;
-    padding: 7px;
+    background-color: #BEC7C7;
+    padding: 1px;
     margin: 0 0 0 0 ; 
     display: block;
 }
 h1{
+    color: #BEC7C7;
+    text-transform: uppercase;
+    background-color: #121317;
     margin: 0 0 0 0;
+    padding: 10px;
 }
