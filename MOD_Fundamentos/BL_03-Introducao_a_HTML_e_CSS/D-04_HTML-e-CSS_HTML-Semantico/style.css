@@ -2,9 +2,10 @@ body {
     margin: 0 0 0 0;
     background-color: #06111C;
     font-family: sans-serif;
+    display: inline-block;
 }
 main{
-    width: 70%;
+    width: 80%;
     color: ivory;
 }
 .imageconf{
@@ -27,6 +28,7 @@ main{
     padding: 1px;
     margin: 0 0 0 0 ; 
     display: block;
+    text-align: left;
 }
 h1{
     color: #BEC7C7;
@@ -34,4 +36,20 @@ h1{
     background-color: #121317;
     margin: 0 0 0 0;
     padding: 10px;
+    text-align: center;
+}
+aside{
+    background-color: lavender;
+    display: inline-block;
+    left: 150px;
+}
+h3{
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+}
+.organization{
+    display: flex;
+    flex-direction: row;
 }
