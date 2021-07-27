@@ -1,45 +1,74 @@
-h1 {
-    text-align: center;
-  }
-
-  .first {
-    background-color: rgb(235, 200, 84);
-    font-size: 20px;
-    height: 50px;
-    text-align: center;
-    width: 200px;
-    display: block;
-    margin-left: 550px;
-  }
-
-  .second {
-    background-color: rgb(219, 219, 219);
-    font-size: 20px;
-    height: 50px;
-    text-align: center;
-    width: 300px;
-  }
-
-  .third {
-    background-color: rgb(170, 142, 106);
-    font-size: 20px;
-    height: 50px;
-    text-align: center;
-    width: 300px;
-  }
-.second, .third {
+body {
+    margin: 0 0 0 0;
+    background-color: #06111C;
+    font-family: sans-serif;
     display: inline-block;
 }
+main{
+    width: 80%;
+    color: ivory;
+}
+.imageconf{
+    width: 400px;
+    margin: 15px 15px 15px 15px;
+}
+#lower{
+    font-size: 30px;
+}
+.navigation li{
+    margin: 0px 20px 0px 20px;
+    text-align: center;
+    background-color: #BEC7C7;
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+}
+.bg-nav {
+    background-color: #BEC7C7;
+    padding: 1px;
+    margin: 0 0 0 0 ; 
+    display: block;
+    text-align: left;
+}
+h1{
+    color: #BEC7C7;
+    text-transform: uppercase;
+    background-color: #121317;
+    margin: 0 0 0 0;
+    padding: 10px;
+    text-align: center;
+}
+aside{
+    background-color: lavender;
+    max-width: 250px;
+    margin: 50px 50px 50px 0px;
+    padding: 15px;
+
+
+}
 h3{
-    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
 }
-.premios li{
-text-align: center;
-display: inline;
+.organization{
+    display: flex;
+    flex-direction: row;
 }
-#podio{
-    text-align: center;
+footer{
+    background-color: #BB2020;
+    padding: 10px;
 }
-.alinhapremio {
-   text-align: center;
+h3{
+    color: #121317;
+    background-color: #FFEB4D;
+}
+.separator{
+    position: absolute;
+    top: 17px;
+    left: 0;
+    width: 4px;
+    height: 10px;
+    background: #ddd;
 }
