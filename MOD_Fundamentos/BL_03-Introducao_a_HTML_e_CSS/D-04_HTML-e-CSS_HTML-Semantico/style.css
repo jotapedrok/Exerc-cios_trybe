@@ -41,7 +41,7 @@ h1{
 aside{
     background-color: lavender;
     max-width: 250px;
-    margin: 50px 50px 50px 50px;
+    margin: 50px 50px 50px 0px;
     padding: 15px;
 
 
@@ -55,4 +55,20 @@ h3{
 .organization{
     display: flex;
     flex-direction: row;
+}
+footer{
+    background-color: #BB2020;
+    padding: 10px;
+}
+h3{
+    color: #121317;
+    background-color: #FFEB4D;
+}
+.separator{
+    position: absolute;
+    top: 17px;
+    left: 0;
+    width: 4px;
+    height: 10px;
+    background: #ddd;
 }
