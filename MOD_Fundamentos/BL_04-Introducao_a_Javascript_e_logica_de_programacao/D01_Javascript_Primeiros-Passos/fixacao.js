@@ -25,14 +25,33 @@
 // console.log(perimetro)
 // console.log(base*2 + altura*2)
 
-let notaAluno = 55;
+// let notaAluno = 55;
 
-if (notaAluno >=80) {
-    console.log ("Parabéns você foi aprovado(a)")
+// if (notaAluno >=80) {
+//     console.log ("Parabéns você foi aprovado(a)")
+// }
+// else if (notaAluno >= 60 && notaAluno < 80) {
+//     console.log ("Você esta em nossa lista de espera")
+// }
+// else {
+//     console.log("Você foi reprovado(a)")
+// };
+
+let statusCandidato = "comendo xuxu";
+
+switch(statusCandidato){
+    case "aprovado":
+        console.log("Parabéns! Você foi aprovado(a)");
+        break;
+
+    case "lista":
+        console.log("Você está em nossa lista de espera.");
+        break;
+
+    case "reprovado":
+        console.log("Você foi reprovado(a)");
+        break;
+
+    default:
+        console.log("Não se aplica.");
 }
-else if (notaAluno >= 60 && notaAluno < 80) {
-    console.log ("Você esta em nossa lista de espera")
-}
-else {
-    console.log("Você foi reprovado(a)")
-};
