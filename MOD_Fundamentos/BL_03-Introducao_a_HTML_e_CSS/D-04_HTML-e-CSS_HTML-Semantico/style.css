@@ -64,11 +64,3 @@ h3{
     color: #121317;
     background-color: #FFEB4D;
 }
-.separator{
-    position: absolute;
-    top: 17px;
-    left: 0;
-    width: 4px;
-    height: 10px;
-    background: #ddd;
-}
