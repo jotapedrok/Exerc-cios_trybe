@@ -10,16 +10,29 @@
 
 // console.log(birthYear);
 
-// birthCity = "otro lugar";
+// // birthCity = "otro lugar";
 
-// console.log(birthCity);
-let base = 8;
-let altura = 5;
-let area = base*altura;
-let perimetro = base*2 + altura*2;
+// // console.log(birthCity);
 
-console.log(area);
-console.log(base*altura)
+// let base = 8;
+// let altura = 5;
+// let area = base*altura;
+// let perimetro = base*2 + altura*2;
 
-console.log(perimetro)
-console.log(base*2 + altura*2)
+// console.log(area);
+// console.log(base*altura)
+
+// console.log(perimetro)
+// console.log(base*2 + altura*2)
+
+let notaAluno = 55;
+
+if (notaAluno >=80) {
+    console.log ("Parabéns você foi aprovado(a)")
+}
+else if (notaAluno >= 60 && notaAluno < 80) {
+    console.log ("Você esta em nossa lista de espera")
+}
+else {
+    console.log("Você foi reprovado(a)")
+};
