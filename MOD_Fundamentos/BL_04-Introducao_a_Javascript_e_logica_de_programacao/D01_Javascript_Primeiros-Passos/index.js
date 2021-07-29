@@ -82,26 +82,50 @@
 //         console.log("Erro! Peça Inválida.")
 //     }
 
-let nota = 45;
+// let nota = 45;
 
-if (nota >= 90 && nota <= 100) {
-console.log("Conceito: "+"A")
+// if (nota >= 90 && nota <= 100) {
+// console.log("Conceito: "+"A")
+// }
+// else if (nota >= 80 && nota < 100) {
+// console.log("Conceito: "+"B")    
+// }
+// else if (nota >= 70 && nota < 100) {
+// console.log("Conceito: "+"C")
+// }
+// else if (nota >= 60 && nota < 100) {
+// console.log("Conceito: "+"D")
+// }
+// else if (nota >= 50 && nota < 100) {
+// console.log("Conceito: "+"E")
+// }
+// else if (nota < 50 && nota > 0) {
+// console.log("Conceito: "+"F")
+// }
+// else {
+// console.log("Erro! Nota Inválida.")
+// }
+
+// let a = 7;
+// let b = 9;
+// let c = 2;
+
+// let par = false;
+
+// if ((a % 2 === 0 || b % 2 === 0 || c % 2 === 0)) {
+//     par = true
+// }
+
+// console.log(par);
+
+let a = 4;
+let b = 8;
+let c = 2;
+
+let impar = false;
+
+if ((a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0)) {
+    impar = true
 }
-else if (nota >= 80 && nota < 100) {
-console.log("Conceito: "+"B")    
-}
-else if (nota >= 70 && nota < 100) {
-console.log("Conceito: "+"C")
-}
-else if (nota >= 60 && nota < 100) {
-console.log("Conceito: "+"D")
-}
-else if (nota >= 50 && nota < 100) {
-console.log("Conceito: "+"E")
-}
-else if (nota < 50 && nota > 0) {
-console.log("Conceito: "+"F")
-}
-else {
-console.log("Erro! Nota Inválida.")
-}
+
+console.log(impar);
