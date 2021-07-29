@@ -1,5 +1,5 @@
-let a = 30;
-let b = 60;
+// let a = 30;
+// let b = 60;
 
 // console.log("Soma: " + (a+b));
 
@@ -18,7 +18,7 @@ let b = 60;
 //     console.log(b +" é maior que "+ a)
 // }
 
-let c = 90;
+// let c = 90;
 
 // if(a > b && a > c) {
 //     console.log(a +" é maior que "+ b +" e "+ c)
@@ -43,17 +43,42 @@ let c = 90;
 //     console.log("zero");
 // }
 
-let somaAngulos = a+b+c;
-let anguloPorAngulo = a > 0 && b > 0 && c > 0;
+// let somaAngulos = a+b+c;
+// let anguloPorAngulo = a > 0 && b > 0 && c > 0;
 
-if (anguloPorAngulo) {
-    if (somaAngulos === 180) {
-        console.log("true")
+// if (anguloPorAngulo) {
+//     if (somaAngulos === 180) {
+//         console.log("true")
+//     }
+//     else {
+//         console.log("false")
+//     }
+// }
+// else {
+//     console.log("ERROR")
+// }
+
+let peçaXadrez = "Rei";
+
+switch(peçaXadrez.toLowerCase()) {
+    case "bispo":
+        console.log("Bispo -> Diagonal");
+        break;
+    case "peão":
+        console.log("Peão -> Uma casa para frente(Pode andar duas na primeira rodada)");
+        break;
+    case "cavalo":
+        console.log("Cavalo -> Anda em L e pode pular outras peças");
+        break;
+    case "torre":
+        console.log("Torre -> Anda em Linha Reta");
+    case "rainha":
+        console.log("Rainha -> Anda quantas casas quiser em qualquer direção");
+        break;
+    case "rei":
+        console.log("Rei -> Uma casa para qualquer direção");
+        break;
+    default:
+        console.log("Erro! Peça Inválida.")
     }
-    else {
-        console.log("false")
-    }
-}
-else {
-    console.log("ERROR")
-}
+
