@@ -118,14 +118,27 @@
 
 // console.log(par);
 
-let a = 4;
-let b = 8;
-let c = 2;
+// let a = 4;
+// let b = 8;
+// let c = 2;
 
-let impar = false;
+// let impar = false;
 
-if ((a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0)) {
-    impar = true
+// if ((a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0)) {
+//     impar = true
+// }
+
+// console.log(impar);
+
+let custo = 50;
+let preço = 70;
+let custoEImposto = custo * 1.2;
+let lucroTotal;
+
+if(custo >= 0 && preço >= 0) {
+lucroTotal = 1000*(preço - custoEImposto);
+console.log("O Lucro total é:"+lucroTotal)
 }
-
-console.log(impar);
+else {
+    console.log("Erro! Os valores não podem ser negativos.");
+}
