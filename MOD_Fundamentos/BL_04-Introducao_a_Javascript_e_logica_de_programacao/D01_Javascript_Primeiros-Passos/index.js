@@ -58,27 +58,50 @@
 //     console.log("ERROR")
 // }
 
-let peçaXadrez = "Rei";
+// let peçaXadrez = "Rei";
 
-switch(peçaXadrez.toLowerCase()) {
-    case "bispo":
-        console.log("Bispo -> Diagonal");
-        break;
-    case "peão":
-        console.log("Peão -> Uma casa para frente(Pode andar duas na primeira rodada)");
-        break;
-    case "cavalo":
-        console.log("Cavalo -> Anda em L e pode pular outras peças");
-        break;
-    case "torre":
-        console.log("Torre -> Anda em Linha Reta");
-    case "rainha":
-        console.log("Rainha -> Anda quantas casas quiser em qualquer direção");
-        break;
-    case "rei":
-        console.log("Rei -> Uma casa para qualquer direção");
-        break;
-    default:
-        console.log("Erro! Peça Inválida.")
-    }
+// switch(peçaXadrez.toLowerCase()) {
+//     case "bispo":
+//         console.log("Bispo -> Diagonal");
+//         break;
+//     case "peão":
+//         console.log("Peão -> Uma casa para frente(Pode andar duas na primeira rodada)");
+//         break;
+//     case "cavalo":
+//         console.log("Cavalo -> Anda em L e pode pular outras peças");
+//         break;
+//     case "torre":
+//         console.log("Torre -> Anda em Linha Reta");
+//     case "rainha":
+//         console.log("Rainha -> Anda quantas casas quiser em qualquer direção");
+//         break;
+//     case "rei":
+//         console.log("Rei -> Uma casa para qualquer direção");
+//         break;
+//     default:
+//         console.log("Erro! Peça Inválida.")
+//     }
 
+let nota = 45;
+
+if (nota >= 90 && nota <= 100) {
+console.log("Conceito: "+"A")
+}
+else if (nota >= 80 && nota < 100) {
+console.log("Conceito: "+"B")    
+}
+else if (nota >= 70 && nota < 100) {
+console.log("Conceito: "+"C")
+}
+else if (nota >= 60 && nota < 100) {
+console.log("Conceito: "+"D")
+}
+else if (nota >= 50 && nota < 100) {
+console.log("Conceito: "+"E")
+}
+else if (nota < 50 && nota > 0) {
+console.log("Conceito: "+"F")
+}
+else {
+console.log("Erro! Nota Inválida.")
+}
