@@ -37,14 +37,18 @@
 // menorValorindex ([2, 4, 6, 7, 10, 0, -3]);
 
 
-function maisLetras (nomes) {
-let letras = 0
-for (let key in nomes){
-    if (nomes[letras].length < nomes[key].length) {
-        letras = key
-    }
-}
-console.log(nomes[letras])
-}
+// function maisLetras (nomes) {
+// let letras = 0
+// for (let key in nomes){
+//     if (nomes[letras].length < nomes[key].length) {
+//         letras = key
+//     }
+// }
+// console.log(nomes[letras])
+// }
 
-maisLetras (['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'])
+// maisLetras (['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']);
+
+function maisRepete (numeros) {
+    
+}
