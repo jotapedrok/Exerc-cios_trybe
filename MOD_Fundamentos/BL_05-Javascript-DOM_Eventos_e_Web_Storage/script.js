@@ -11,16 +11,19 @@
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
 
+                            // Exercício 1
 function insereTxt (local, index, texto) {
 document.getElementsByTagName(local)[index].innerHTML = texto;
 }
 insereTxt ('p', 0, 'Formado na Trybe, Casado e com um bom emprego, desenvolvendo meu software de organização financeira');
 
+                            // Exercício 2
 function corFundo (classe, index, cor) {
     document.getElementsByClassName(classe)[index].style.backgroundColor = cor;
 }
 corFundo ('main-content', 0, 'rgb(76,164,109)');
 
+                            // Exercício 3
 // function bgColorCenter (classe, index, cor) {
 //     document.getElementsByClassName(classe)[index].style.backgroundColor = cor;
 // }
@@ -28,6 +31,7 @@ corFundo ('main-content', 0, 'rgb(76,164,109)');
 
 corFundo ('center-content', 0, 'white');
 
+                            // Exercício 4
 // function corrigeTxt (tag, index, texto) {
 //     document.getElementsByTagName(tag)[index].innerHTML = texto;
 // }
@@ -35,6 +39,7 @@ corFundo ('center-content', 0, 'white');
 
 insereTxt ('h1', 0, 'Exercícios 5.1 - Javascript');
 
+                            // Exercício 5
 function upperCase (tag) {
     let paragraph = document.getElementsByTagName(tag);
     for (let i = 0; i < paragraph.length; i += 1) {
@@ -43,6 +48,7 @@ function upperCase (tag) {
 }
 upperCase ('p');
 
+                            // Exercício 6
 function showConsole (tag) {
     let paragraph = document.getElementsByTagName(tag);
     for (let i = 0; i < paragraph.length; i += 1) {
