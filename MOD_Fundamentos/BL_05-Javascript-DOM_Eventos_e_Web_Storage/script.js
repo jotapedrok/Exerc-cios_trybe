@@ -16,12 +16,20 @@ document.getElementsByTagName(local)[index].innerHTML = texto;
 }
 insereTxt ('p', 0, 'Formado na Trybe, Casado e com um bom emprego, desenvolvendo meu software de organização financeira');
 
-function verdeTrybe (classe, index, cor) {
+function corFundo (classe, index, cor) {
     document.getElementsByClassName(classe)[index].style.backgroundColor = cor;
 }
-verdeTrybe ('main-content', 0, 'rgb(76,164,109)');
+corFundo ('main-content', 0, 'rgb(76,164,109)');
 
-function bgColorCenter (classe, index, cor) {
-    document.getElementsByClassName(classe)[index].style.backgroundColor = cor;
+// function bgColorCenter (classe, index, cor) {
+//     document.getElementsByClassName(classe)[index].style.backgroundColor = cor;
+// }
+// bgColorCenter ('center-content', 0, 'white');
+
+corFundo ('center-content', 0, 'white');
+
+function corrigeTxt (tag, index, texto) {
+    document.getElementsByTagName(tag)[index].innerHTML = texto;
 }
-bgColorCenter ('center-content', 0, 'white');
+corrigeTxt ('h1', 0, 'Exercícios 5.1 - Javascript');
+
