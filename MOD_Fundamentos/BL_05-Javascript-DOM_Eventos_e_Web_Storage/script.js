@@ -49,4 +49,4 @@ function showConsole (tag) {
         console.log(paragraph[i].innerText);
     }
 }
-showConsole ('p')
+showConsole ('p');
