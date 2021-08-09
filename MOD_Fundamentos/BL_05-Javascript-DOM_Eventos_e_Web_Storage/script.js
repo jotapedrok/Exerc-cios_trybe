@@ -28,8 +28,17 @@ corFundo ('main-content', 0, 'rgb(76,164,109)');
 
 corFundo ('center-content', 0, 'white');
 
-function corrigeTxt (tag, index, texto) {
-    document.getElementsByTagName(tag)[index].innerHTML = texto;
-}
-corrigeTxt ('h1', 0, 'Exercícios 5.1 - Javascript');
+// function corrigeTxt (tag, index, texto) {
+//     document.getElementsByTagName(tag)[index].innerHTML = texto;
+// }
+// corrigeTxt ('h1', 0, 'Exercícios 5.1 - Javascript');
 
+insereTxt ('h1', 0, 'Exercícios 5.1 - Javascript');
+
+function upperCase (tag) {
+    let paragraph = document.getElementsByTagName(tag);
+    for (let i = 0; i < paragraph.length; i += 1) {
+        paragraph[i].innerHTML = paragraph[i].innerHTML.toUpperCase();
+    }
+}
+upperCase ('p');
