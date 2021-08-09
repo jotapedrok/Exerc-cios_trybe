@@ -42,3 +42,11 @@ function upperCase (tag) {
     }
 }
 upperCase ('p');
+
+function showConsole (tag) {
+    let paragraph = document.getElementsByTagName(tag);
+    for (let i = 0; i < paragraph.length; i += 1) {
+        console.log(paragraph[i].innerText);
+    }
+}
+showConsole ('p')
