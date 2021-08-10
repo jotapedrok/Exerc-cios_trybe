@@ -14,8 +14,14 @@ mainId.id = 'main-content';
 
                     // Exercício 3
 let sectionCenter = document.createElement('section');
-body.appendChild(sectionCenter);
+let mainC = document.querySelector('#main-content');
+mainC.appendChild(sectionCenter);
 let centerId = document.querySelector('section');
 centerId.id = 'center-content';
 
                     // Exercício 4
+let p1 = document.createElement('p');
+let sCenter = document.querySelector('#center-content');
+sCenter.appendChild(p1);
+let paragraph1 = document.querySelector('#center-content p');
+paragraph1.innerText = 'I love Lo-Fi...';
