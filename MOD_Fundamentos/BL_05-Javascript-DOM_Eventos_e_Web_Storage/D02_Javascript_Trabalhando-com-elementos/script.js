@@ -12,3 +12,10 @@ body.appendChild(main);
 let mainId = document.querySelector('main');
 mainId.id = 'main-content';
 
+                    // Exercício 3
+let sectionCenter = document.createElement('section');
+body.appendChild(sectionCenter);
+let centerId = document.querySelector('section');
+centerId.id = 'center-content';
+
+                    // Exercício 4
