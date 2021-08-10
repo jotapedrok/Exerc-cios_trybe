@@ -73,4 +73,7 @@ titleId.className = 'title';
 let arrayh3 = document.getElementsByTagName('h3');
 for (i = 0; i < arrayh3.length; i += 1) {
     arrayh3[i].className = 'description';
-}
+};
+
+                    // Exercício 3
+body.removeChild(sectionLeft);
