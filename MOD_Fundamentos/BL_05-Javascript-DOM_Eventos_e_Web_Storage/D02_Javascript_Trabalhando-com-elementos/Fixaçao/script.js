@@ -40,3 +40,10 @@ filhoDoFilhoId.id = 'FilhoDoPrimeiroFilhoDoFilho'
                         // Fixação 12
 let filhoDoFilhoAqui = document.querySelector('#primeiroFilhoDoFilho').children[0];
 filhoDoFilhoAqui.parentElement.parentElement.nextElementSibling;
+
+                        // Fixação 13
+let paiDoPai = document.querySelectorAll('#paiDoPai');
+
+// for (i = 0; i < paiDoPai.length; i += 1) {
+//     if paiDoPai[index]
+// }
