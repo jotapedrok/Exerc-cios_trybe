@@ -8,3 +8,15 @@ pai.style.backgroundColor = 'blue';
 // Fixação 3
 elementoOndeVoceEsta.firstElementChild.innerText = 'Lo-Fi is Amazing!';
 
+// Fixação 4
+pai.firstElementChild;
+
+// Fixação 5
+elementoOndeVoceEsta.previousElementSibling;
+
+// Fixação 6
+elementoOndeVoceEsta.nextSibling;
+
+//Fixação 7
+elementoOndeVoceEsta.nextElementSibling;
+
