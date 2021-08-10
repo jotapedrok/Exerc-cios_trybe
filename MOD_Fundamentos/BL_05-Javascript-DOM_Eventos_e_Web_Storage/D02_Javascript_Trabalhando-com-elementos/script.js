@@ -62,9 +62,15 @@ for (i = 0; i < listNums.length; i += 1) {
 for (i = 0; i < 3; i += 1) {
     let criaSubTitle = document.createElement('h3');
     mainId.appendChild(criaSubTitle);
+};
+
+                    //--------PARTE 2--------//
+
+                    // Exercício 1
+titleId.className = 'title';
+
+                    // Exercício 2
+let arrayh3 = document.getElementsByTagName('h3');
+for (i = 0; i < arrayh3.length; i += 1) {
+    arrayh3[i].className = 'description';
 }
-
-
-
-
-
