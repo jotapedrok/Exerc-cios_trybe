@@ -17,7 +17,7 @@ elementoOndeVoceEsta.previousElementSibling;
 // Fixação 6
 elementoOndeVoceEsta.nextSibling;
 
-//Fixação 7
+// Fixação 7
 elementoOndeVoceEsta.nextElementSibling;
 
 // Fixação 8
@@ -27,3 +27,6 @@ pai.children[2];
 let irmaoDeOndeEuTo = document.createElement('section');
 document.querySelector('#pai').appendChild(irmaoDeOndeEuTo);
 
+// Fixação 10
+let filhoDeOndeEuTo = document.createElement('section');
+document.querySelector('#elementoOndeVoceEsta').appendChild(filhoDeOndeEuTo);
