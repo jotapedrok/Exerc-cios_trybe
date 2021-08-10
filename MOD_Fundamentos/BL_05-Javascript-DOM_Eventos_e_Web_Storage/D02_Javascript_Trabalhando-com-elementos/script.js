@@ -56,6 +56,12 @@ for (i = 0; i < listNums.length; i += 1) {
     let criaLi = document.createElement('li');
     criaLi.innerHTML = num;
     list.appendChild(criaLi);
+};
+
+                    // Exercício 9
+for (i = 0; i < 3; i += 1) {
+    let criaSubTitle = document.createElement('h3');
+    mainId.appendChild(criaSubTitle);
 }
 
 
