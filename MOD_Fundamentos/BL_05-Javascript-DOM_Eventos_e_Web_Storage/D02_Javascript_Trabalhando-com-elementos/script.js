@@ -25,3 +25,9 @@ let sCenter = document.querySelector('#center-content');
 sCenter.appendChild(p1);
 let paragraph1 = document.querySelector('#center-content p');
 paragraph1.innerText = 'I love Lo-Fi...';
+
+                    // Exercício 5
+let secLCreat = document.createElement('section');
+body.appendChild(secLCreat);
+let sectionLeft = document.getElementsByTagName('section')[1];
+sectionLeft.id = 'left-content';
