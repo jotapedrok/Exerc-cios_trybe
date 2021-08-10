@@ -30,3 +30,7 @@ document.querySelector('#pai').appendChild(irmaoDeOndeEuTo);
 // Fixação 10
 let filhoDeOndeEuTo = document.createElement('section');
 document.querySelector('#elementoOndeVoceEsta').appendChild(filhoDeOndeEuTo);
+
+// Fixação 11
+let filhoDoFilho = document.createElement('section');
+document.querySelector('#primeioFilhoDoFilho').appendChild(filhoDoFilho);
