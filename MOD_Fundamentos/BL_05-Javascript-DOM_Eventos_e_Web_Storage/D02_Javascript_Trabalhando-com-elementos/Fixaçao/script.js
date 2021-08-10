@@ -33,4 +33,10 @@ document.querySelector('#elementoOndeVoceEsta').appendChild(filhoDeOndeEuTo);
 
 // Fixação 11
 let filhoDoFilho = document.createElement('section');
-document.querySelector('#primeioFilhoDoFilho').appendChild(filhoDoFilho);
+document.querySelector('#primeiroFilhoDoFilho').appendChild(filhoDoFilho);
+let filhoDoFilhoId = document.querySelector('#primeiroFilhoDoFilho section');
+filhoDoFilhoId.id = 'FilhoDoPrimeiroFilhoDoFilho'
+
+// Fixação 12
+let filhoDoFilhoAqui = document.querySelector('#primeiroFilhoDoFilho').children[0];
+filhoDoFilhoAqui.parentElement.parentElement.nextElementSibling;
