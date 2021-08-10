@@ -31,3 +31,9 @@ let secLCreat = document.createElement('section');
 body.appendChild(secLCreat);
 let sectionLeft = document.getElementsByTagName('section')[1];
 sectionLeft.id = 'left-content';
+
+                    // Exercício 6
+let secRCreat = document.createElement('section');
+body.appendChild(secRCreat);
+let sectionRight = document.getElementsByTagName('section')[2];
+sectionRight.id = 'right-content';
