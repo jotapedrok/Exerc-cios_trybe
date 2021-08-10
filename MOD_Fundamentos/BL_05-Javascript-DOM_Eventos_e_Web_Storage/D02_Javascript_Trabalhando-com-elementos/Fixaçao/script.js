@@ -20,3 +20,5 @@ elementoOndeVoceEsta.nextSibling;
 //Fixação 7
 elementoOndeVoceEsta.nextElementSibling;
 
+// Fixação 8
+pai.children[2];
