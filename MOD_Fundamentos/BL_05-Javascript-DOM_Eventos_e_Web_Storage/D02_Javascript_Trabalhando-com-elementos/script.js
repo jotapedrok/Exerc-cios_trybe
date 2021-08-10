@@ -37,3 +37,10 @@ let secRCreat = document.createElement('section');
 body.appendChild(secRCreat);
 let sectionRight = document.getElementsByTagName('section')[2];
 sectionRight.id = 'right-content';
+
+                    // Exercício 7
+let imgLCreat = document.createElement('img');
+sectionLeft.appendChild(imgLCreat);
+let imgLeft = document.querySelector('#left-content img');
+imgLeft.setAttribute('src', 'https://picsum.photos/200');
+imgLeft.className = 'small-image';
