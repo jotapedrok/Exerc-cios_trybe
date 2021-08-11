@@ -54,7 +54,26 @@ function botao(nomeDoBotao){
     let button = document.createElement('button');
     
 button.innerHTML = nomeDoBotao;
-button.id = 'btn-holiday'
-divButton.appendChild(button)
+button.id = 'btn-holiday';
+divButton.appendChild(button);
 } 
-botao('Feriados')
+botao('Feriados');
+
+                    // Exercício 3
+function corHolidays () {
+    let botaoFeriado = document.querySelector('#btn-holiday');
+    let diasFeriados = document.querySelectorAll('.holiday');
+
+    function changeColor(eventChC){
+        for (let i = 0; i < diasFeriados.length; i += 1) {
+            if (diasFeriados[i].style.backgroundColor === 'white') {
+                diasFeriados[i].style.backgroundColor = 'unset';
+            } else {
+                diasFeriados[i].style.backgroundColor = 'white'
+            }
+        }
+    }
+
+    botaoFeriado.addEventListener('click', changeColor);
+}
+corHolidays();
