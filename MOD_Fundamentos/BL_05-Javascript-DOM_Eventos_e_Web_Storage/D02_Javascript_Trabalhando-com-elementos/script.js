@@ -77,3 +77,6 @@ for (i = 0; i < arrayh3.length; i += 1) {
 
                     // Exercício 3
 body.removeChild(sectionLeft);
+
+                    // Exercício 4
+sectionRight.style.marginRight = 'auto';
