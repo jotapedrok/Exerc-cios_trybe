@@ -27,7 +27,7 @@ function changeText(eventCT) {
     let tgt = document.querySelector('.tech');
     tgt.innerHTML = input.value;
 };
-input.addEventListener('oninput', changeText);
+input.addEventListener('input', changeText);
 
  /*Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 redirecione para alguma página;
@@ -45,10 +45,14 @@ a cor do mesmo;
 */
 
 function changeColor (eventCC) {
-    myWebpage.style.color = 'red';
+    myWebpage.style.color = 'black';
+};
+function backColor (eventBC) {
+    myWebpage.style.color = 'unset'
 };
 
-myWebpage.addEventListener(over)
+myWebpage.addEventListener('mouseover', changeColor);
+myWebpage.addEventListener('mouseout', backColor);
 
 /*
 Segue abaixo um exemplo do uso de event.target:
@@ -62,6 +66,8 @@ function resetText(event) {
 }
 
 firstLi.addEventListener('dblclick', resetText);
+secondLi.addEventListener('dblclick', resetText);
+thirdLi.addEventListener('dblclick', resetText);
 
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
