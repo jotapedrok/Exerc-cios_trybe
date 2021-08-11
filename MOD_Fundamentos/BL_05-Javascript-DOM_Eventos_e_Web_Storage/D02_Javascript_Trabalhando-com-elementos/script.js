@@ -80,3 +80,7 @@ body.removeChild(sectionLeft);
 
                     // Exercício 4
 sectionRight.style.marginRight = 'auto';
+
+                    // Exercício 5
+let toMain = document.getElementsByClassName('center-content')[0].parentElement;
+toMain.style.backgroundColor = 'green';
