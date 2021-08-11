@@ -84,3 +84,9 @@ sectionRight.style.marginRight = 'auto';
                     // Exercício 5
 let toMain = document.getElementsByClassName('center-content')[0].parentElement;
 toMain.style.backgroundColor = 'green';
+
+                    // Exercício 6
+let nove = document.getElementsByTagName('li')[8];
+let dez = document.getElementsByTagName('li')[9];
+list.removeChild(nove);
+list.removeChild(dez);
