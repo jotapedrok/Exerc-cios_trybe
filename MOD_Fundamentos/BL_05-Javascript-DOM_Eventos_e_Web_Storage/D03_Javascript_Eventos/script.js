@@ -49,7 +49,7 @@ for (let i = 0; i < dezDaysList.length; i += 1) {
 diasDoMês();
 
                     // Exercício 2
-function botao(nomeDoBotao){
+function botaoFeriado(nomeDoBotao){
     let divButton = document.querySelector('.buttons-container');
     let button = document.createElement('button');
     
@@ -57,7 +57,7 @@ button.innerHTML = nomeDoBotao;
 button.id = 'btn-holiday';
 divButton.appendChild(button);
 } 
-botao('Feriados');
+botaoFeriado('Feriados');
 
                     // Exercício 3
 function corHolidays () {
@@ -77,3 +77,14 @@ function corHolidays () {
     botaoFeriado.addEventListener('click', changeColor);
 }
 corHolidays();
+
+                    // Exercicio 4
+function botaoSexta(nomeDoBotao){
+    let divButton = document.querySelector('.buttons-container');
+    let button = document.createElement('button');
+    
+button.innerHTML = nomeDoBotao;
+button.id = 'btn-friday';
+divButton.appendChild(button);
+} 
+botaoSexta('Sexta-Feira');
