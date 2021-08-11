@@ -49,3 +49,12 @@ for (let i = 0; i < dezDaysList.length; i += 1) {
 diasDoMês();
 
                     // Exercício 2
+function botao(nomeDoBotao){
+    let divButton = document.querySelector('.buttons-container');
+    let button = document.createElement('button');
+    
+button.innerHTML = nomeDoBotao;
+button.id = 'btn-holiday'
+divButton.appendChild(button)
+} 
+botao('Feriados')
