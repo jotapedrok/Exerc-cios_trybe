@@ -61,20 +61,22 @@ botaoFeriado('Feriados');
 
                     // Exercício 3
 function corHolidays () {
-    let botaoFeriado = document.querySelector('#btn-holiday');
+    let botaoFeriados = document.querySelector('#btn-holiday');
     let diasFeriados = document.querySelectorAll('.holiday');
 
     function changeColor(eventChC){
         for (let i = 0; i < diasFeriados.length; i += 1) {
-            if (diasFeriados[i].style.backgroundColor === 'white') {
+            if (diasFeriados[i].style.backgroundColor === 'white' || diasFeriados[i].style.backgroundColor === 'purple') {
                 diasFeriados[i].style.backgroundColor = 'unset';
+            } else if (diasFeriados[i].innerText === '25') {
+                diasFeriados[i].style.backgroundColor = 'purple';
             } else {
-                diasFeriados[i].style.backgroundColor = 'white'
+                diasFeriados[i].style.backgroundColor = 'white';
             }
         }
     }
 
-    botaoFeriado.addEventListener('click', changeColor);
+    botaoFeriados.addEventListener('click', changeColor);
 }
 corHolidays();
 
@@ -88,3 +90,28 @@ button.id = 'btn-friday';
 divButton.appendChild(button);
 } 
 botaoSexta('Sexta-Feira');
+
+                    //Exercicio 5
+function corTextFriday() {
+    let botaoFriday = document.querySelector('#btn-friday');
+    let diasDeSexta = document.querySelectorAll('.friday');
+    let sextasDez = [4, 11, 18, 25]
+
+    function changeTxtColor(eventChTC){
+        for (let i = 0; i < diasDeSexta.length; i += 1) {
+            if (diasDeSexta[i].style.backgroundColor === 'red' || diasDeSexta[i].style.backgroundColor === 'purple') {
+                diasDeSexta[i].style.backgroundColor = 'unset';
+                diasDeSexta[i].innerText = sextasDez[i];
+            } else if (diasDeSexta[i].innerText === '25') {
+                diasDeSexta[i].style.backgroundColor = 'purple';
+                diasDeSexta[i].innerText = 'Sextou!!!';
+            } else {
+                diasDeSexta[i].style.backgroundColor = 'red';
+                diasDeSexta[i].innerText = 'Sextou!!!';
+            }
+        }
+    }
+
+    botaoFriday.addEventListener('click', changeTxtColor);
+}
+corTextFriday();
