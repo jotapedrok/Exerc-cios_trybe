@@ -66,10 +66,8 @@ function corHolidays () {
 
     function changeColor(eventChC){
         for (let i = 0; i < diasFeriados.length; i += 1) {
-            if (diasFeriados[i].style.backgroundColor === 'white' || diasFeriados[i].style.backgroundColor === 'purple') {
+            if (diasFeriados[i].style.backgroundColor === 'white') {
                 diasFeriados[i].style.backgroundColor = 'unset';
-            } else if (diasFeriados[i].innerText === '25') {
-                diasFeriados[i].style.backgroundColor = 'purple';
             } else {
                 diasFeriados[i].style.backgroundColor = 'white';
             }
@@ -97,21 +95,16 @@ function corTextFriday() {
     let diasDeSexta = document.querySelectorAll('.friday');
     let sextasDez = [4, 11, 18, 25]
 
-    function changeTxtColor(eventChTC){
+    function changeTxt(eventChTC){
         for (let i = 0; i < diasDeSexta.length; i += 1) {
-            if (diasDeSexta[i].style.backgroundColor === 'red' || diasDeSexta[i].style.backgroundColor === 'purple') {
-                diasDeSexta[i].style.backgroundColor = 'unset';
+            if (diasDeSexta[i].innerText === 'Sextou!!!') {
                 diasDeSexta[i].innerText = sextasDez[i];
-            } else if (diasDeSexta[i].innerText === '25') {
-                diasDeSexta[i].style.backgroundColor = 'purple';
-                diasDeSexta[i].innerText = 'Sextou!!!';
             } else {
-                diasDeSexta[i].style.backgroundColor = 'red';
                 diasDeSexta[i].innerText = 'Sextou!!!';
             }
         }
     }
 
-    botaoFriday.addEventListener('click', changeTxtColor);
+    botaoFriday.addEventListener('click', changeTxt);
 }
 corTextFriday();
