@@ -85,16 +85,20 @@ mudaLineHeight.addEventListener('change', changeLineHeight);
 
 function changeColors () {
     function changeColorTxt () {
+        let body = document.querySelector('body');
         let txtColorSelected = document.querySelector('#textoCor').value;
+        let textPastedBox = document.querySelector('.pasteTextBox');
         text.style.color = txtColorSelected;
+        body.style.color = txtColorSelected;
+        textPastedBox.style.color = txtColorSelected;
     }
 
     changeColorTxt();
 
     function changeColorBg () {
         let bgColorSelected = document.querySelector('#fundoCor').value;
-        let bodyColor = document.querySelector('body').style.backgroundColor;
-    bodyColor = bgColorSelected;
+        let bodyColor = document.querySelector('body');
+    bodyColor.style.backgroundColor = bgColorSelected;
 
     }
 
