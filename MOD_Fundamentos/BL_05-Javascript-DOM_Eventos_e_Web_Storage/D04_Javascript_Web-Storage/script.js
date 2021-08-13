@@ -118,6 +118,11 @@
         let boxOfTxt = document.querySelector('.textPasted');
         let bodyOfPage = document.body;
         let boxToPasteTxt = document.querySelector('.pasteTextBox');
+        let corFundo = document.querySelector('#fundoCor');
+        let corLetra = document.querySelector('#textoCor');
+        let tamanhoFonte = document.querySelector('#tamanhoFonte');
+        let familiaFonte = document.querySelector('#fontFamilyOpt');
+        let espacoLinha = document.querySelector('#lineHeightSelect');
 
         boxOfTxt.innerText = savedTxt;
         boxOfTxt.style.fontFamily = savedFontFamily;
@@ -127,7 +132,12 @@
         bodyOfPage.style.color = savedColorTxt;
         boxToPasteTxt.style.color = savedColorTxt;
         bodyOfPage.style.backgroundColor = savedColorBg;
-
+        corFundo.value = savedColorBg;
+        corLetra.value = savedColorTxt;
+        tamanhoFonte.placeholder = parseInt(savedFontSize);
+        familiaFonte.placeholder = savedFontFamily;
+        familiaFonte.value = savedFontFamily;
+        espacoLinha.placeholder = savedLineHeight;
     }
     saveds();
 }
