@@ -8,23 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="colorBG">
-    </section>
-    <section class="colorTxt">
-    </section>
-    <fieldset class="textConf">
-        <div style="width: 75px;">
-        <p class="withoutBorder">Tamanho Da Fonte:</p>
-        <input type="number" min="8" max="400" list="fontsize" placeholder="14" class="tamanhoFonte" style="object-position: center;">
-        </div>
-    </fieldset>
-    <datalist id="fontsize"></datalist>
+    <div class="hide">
+        <fieldset class="textConf">
+            <div id ="containerFontSize" class="confTextBox">
+            <p class="withoutBorder">Tamanho Da Fonte:</p>
+            <input type="number" min="8" max="400" list="fontsize" placeholder="14" style="margin-left: 35px;" class="tamanhoFonte">
+            </div>
+            <div id="containerFontFamily" class="confTextBox">
+                <p class="withoutBorder" style="margin-bottom: 5px;">Tipo da Fonte:</p>
+                <select id="fontFamilyOpt" class="listFontFamily" placeholder="Arial" style="margin-left: 6px"></select>
+            </div>
+            <div id="containerFontHeight" class="confTextBox">
+                <p class="withoutBorder">Espaçamento</p>
+                <input type="number" step="0.25" min="0.5" max="400" list="lineHeight" placeholder="1" class="tamanhoFonte" style="object-position: center; width: 80px; margin-left: 30px;">
+            </div>
+        </fieldset>
+        <datalist id="fontsize"></datalist>
+        <datalist id='lineHeight'></datalist>
+        <fieldset class="colorConf">
+            <div  class="colorTxt confTextBox">
+                <p class="withoutBorder">Cor da Letra</p>
+                <input type="color" style="margin-left: 45px; margin-top: 5px;">
+            </div>
+            <div class="colorBg confTextBox">
+                <p class="withoutBorder">Cor do Fundo</p>
+                <input type="color" style="margin-left: 45px; margin-top: 5px;" value="#DCDCDC">
+            </div>
+            <div class="confTextBox">
+                <input type="button" value="Mudar">
+            </div>
+        </fieldset>
+    </div>
     <div class="textPastedArea">
         <p class="textPasted"></p>
     </div>
     <section>
         <textarea row= 23 class="pasteTextBox" placeholder="Cole seu texto aqui"></textarea>
     </section>
+    <input type="button" value="Ler" style="font-size: large; width: 100px; font-weight: bold;">
     <script src="script.js"></script>
 </body>
 </html>

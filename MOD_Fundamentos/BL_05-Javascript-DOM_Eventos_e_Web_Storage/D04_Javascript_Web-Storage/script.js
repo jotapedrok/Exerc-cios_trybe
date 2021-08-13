@@ -7,4 +7,26 @@ function sizePossibles(){
         sizeList.appendChild(size)
     }
 }
-sizePossibles()
+sizePossibles();
+
+function fontFamilyPossibles() {
+    let possibleFontFamilys = ['Arial', 'Cambria', 'Georgia', 'Impact', 'Gill Sans', 'Times New Roman', 'Courier New', 'Lucida Sans'];
+    let familyList = document.querySelector('#fontFamilyOpt');
+    for(let i = 0; i < possibleFontFamilys.length; i += 1) {
+        let family = document.createElement('option');
+        family.innerText = possibleFontFamilys[i];
+        familyList.appendChild(family)
+    }
+}
+fontFamilyPossibles();
+
+function lineHeightPossibles() {
+    let possibleLineHeight = [0.5, 0.75, 1, 1.5, 2, 2.5, 3, 4];
+    let heightList = document.querySelector('#lineHeight');
+    for(let i = 0; i < possibleLineHeight.length; i += 1) {
+        let height = document.createElement('option');
+        height.innerText = possibleLineHeight[i];
+        heightList.appendChild(height)
+    }
+}
+lineHeightPossibles();
