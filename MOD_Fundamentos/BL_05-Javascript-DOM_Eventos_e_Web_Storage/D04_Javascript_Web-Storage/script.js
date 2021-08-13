@@ -18,18 +18,20 @@ function fontFamilyPossibles() {
         familyList.appendChild(family)
     }
 }
-fontFamilyPossibles();
 
-function lineHeightPossibles() {
-    let possibleLineHeight = [0.75, 1, 1.5, 2, 2.5, 3, 4];
-    let heightList = document.querySelector('#lineHeight');
-    for(let i = 0; i < possibleLineHeight.length; i += 1) {
-        let height = document.createElement('option');
-        height.innerText = possibleLineHeight[i];
-        heightList.appendChild(height)
-    }
-}
-lineHeightPossibles();
+ fontFamilyPossibles();
+ 
+// DESISTI DE USAR:
+// function lineHeightPossibles() {
+//     let possibleLineHeight = [0.75, 1, 1.5, 2, 2.5, 3, 4];
+//     let heightList = document.querySelector('#lineHeight');
+//     for(let i = 0; i < possibleLineHeight.length; i += 1) {
+//         let height = document.createElement('option');
+//         height.innerText = possibleLineHeight[i];
+//         heightList.appendChild(height)
+//     }
+// }
+// lineHeightPossibles();
 
 function pasteText () {
     function pasting () {
@@ -43,16 +45,41 @@ function pasteText () {
 }
 pasteText()
 
-
+let text = document.querySelector('.textPasted');
 
 function changeFontSize () {
-    let text = document.querySelector('.textPasted');
     let sizeSelected = document.querySelector('#tamanhoFonte').value;
+    if (sizeSelected === "") {
+        text.style.fontSize = "14px"
+    } else {
    text.style.fontSize = sizeSelected + "px"
+    }
 }
-
-changeFontSize()
 
 let mudaFonte = document.querySelector('#tamanhoFonte');
 
 mudaFonte.addEventListener('change', changeFontSize);
+
+function changeFontFamily () {
+    let fontSelected = document.querySelector('#fontFamilyOpt').value;
+
+    text.style.fontFamily = fontSelected;
+}
+
+let mudaFamilia = document.querySelector('#fontFamilyOpt');
+
+mudaFamilia.addEventListener('change', changeFontFamily);
+
+function changeLineHeight () {
+    let heightSelected = document.querySelector('#lineHeightSelect').value;
+    if (heightSelected === "") {
+        text.style.lineHeight = "1.25";
+    } else {
+   text.style.lineHeight = heightSelected;
+    }
+}
+
+let mudaLineHeight = document.querySelector('#lineHeightSelect');
+
+mudaLineHeight.addEventListener('change', changeLineHeight);
+
