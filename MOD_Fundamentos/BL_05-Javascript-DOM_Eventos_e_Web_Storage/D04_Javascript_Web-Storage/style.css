@@ -1,19 +1,18 @@
 body {
     margin: 10px 20% 10px 10%;
     position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
     padding: auto;
     background-color: #DCDCDC;
 }
 
 .pasteTextBox {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1;
+    font-size: 12px;
+    line-height: 0.75;
     padding: 15px 10px 5px 10px;
     border-radius: 5%;
-    width: 460px;
-    height: 300px;
+    width: 650px;
+    height: 150px;
     outline: none;
     resize: none;
     background-color: transparent

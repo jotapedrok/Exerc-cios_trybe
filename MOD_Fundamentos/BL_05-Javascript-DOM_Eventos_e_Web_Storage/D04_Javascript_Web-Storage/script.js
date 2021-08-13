@@ -21,7 +21,7 @@ function fontFamilyPossibles() {
 fontFamilyPossibles();
 
 function lineHeightPossibles() {
-    let possibleLineHeight = [0.5, 0.75, 1, 1.5, 2, 2.5, 3, 4];
+    let possibleLineHeight = [0.75, 1, 1.5, 2, 2.5, 3, 4];
     let heightList = document.querySelector('#lineHeight');
     for(let i = 0; i < possibleLineHeight.length; i += 1) {
         let height = document.createElement('option');
@@ -30,3 +30,13 @@ function lineHeightPossibles() {
     }
 }
 lineHeightPossibles();
+
+function pasteText () {
+    function pasting () {
+        let inPasteBox = document.querySelector('.pasteTextBox').value;
+        let spaceToPaste = document.querySelector('.textPasted');
+        spaceToPaste.innerText = inPasteBox;
+    }
+    document.addEventListener('click', pasting)
+}
+pasteText()
