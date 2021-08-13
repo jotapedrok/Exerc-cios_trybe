@@ -8,11 +8,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>uhasduhasdhuaduhuhd</p>
-    <section>
-        <p>asudhasdhuasdhuasduhas222</p>
+    <section class="colorBG">
     </section>
-    <section id="test"></section>
-<script src="script.js"></script>
+    <section class="colorTxt">
+    </section>
+    <fieldset class="textConf">
+        <div style="width: 75px;">
+        <p class="withoutBorder">Tamanho Da Fonte:</p>
+        <input type="number" min="8" max="400" list="fontsize" placeholder="14" class="tamanhoFonte" style="object-position: center;">
+        </div>
+    </fieldset>
+    <datalist id="fontsize"></datalist>
+    <div class="textPastedArea">
+        <p class="textPasted"></p>
+    </div>
+    <section>
+        <textarea row= 23 class="pasteTextBox" placeholder="Cole seu texto aqui"></textarea>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
