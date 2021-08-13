@@ -129,12 +129,40 @@ function textZoomOut (event) {
 days.addEventListener('mouseout', textZoomOut);
 
                     //Exercicio 7
+let taskList = document.querySelector('.my-tasks');
+
 function newTask (NameTask) {
     let task = document.createElement('span');
     task.innerText = NameTask;
 
-    let taskList = document.querySelector('.my-tasks');
     taskList.appendChild(task);
 }
 
 newTask('Codar');
+
+                    //Exercicio 8
+function colorTask (cor) {
+    let color = document.createElement('div');
+    color.className = 'task'
+    color.style.backgroundColor = cor;
+
+    taskList.appendChild(color);
+}
+
+colorTask('red');
+
+                    //Exercicio 9
+function selectTask (event) {
+    let taskSelectList = document.getElementsByClassName('selected');
+    if (taskSelectList.length === 0) {
+    event.target.classList.add('selected');
+    event.target.style.border = 'solid black';
+    } else {
+        event.target.classList.remove('selected');
+        event.target.style.border = 'unset'
+    }
+}
+
+let tasks = document.querySelector('.task');
+tasks.addEventListener('click', selectTask);
+
