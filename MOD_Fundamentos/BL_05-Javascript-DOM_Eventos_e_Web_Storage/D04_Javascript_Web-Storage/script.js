@@ -1,3 +1,5 @@
+    window.onload = function () {
+
     function sizePossibles(){
         let possibleFontSizes = [8, 9, 10, 11, 12, 14, 18, 24, 30, 36, 48, 60, 72, 96];
         let sizeList = document.getElementById('fontsize');
@@ -26,10 +28,11 @@
             let inPasteBox = document.querySelector('.pasteTextBox').value;
             let spaceToPaste = document.querySelector('.textPasted');
             spaceToPaste.innerText = inPasteBox;
+            localStorage.setItem('textoEscito', spaceToPaste.innerText);
         }
-        let botaoLer = document.querySelector('#lerButton')
+        let botaoLer = document.querySelector('#lerButton');
 
-        botaoLer.addEventListener('click', pasting)
+        botaoLer.addEventListener('click', pasting);
     }
     pasteText()
 
@@ -42,6 +45,7 @@
         } else {
     text.style.fontSize = sizeSelected + "px"
         }
+    localStorage.setItem('fontSize', sizeSelected + "px")
     }
 
     let mudaFonte = document.querySelector('#tamanhoFonte');
@@ -52,6 +56,7 @@
         let fontSelected = document.querySelector('#fontFamilyOpt').value;
 
         text.style.fontFamily = fontSelected;
+        localStorage.setItem('fontFamily', fontSelected);
     }
 
     let mudaFamilia = document.querySelector('#fontFamilyOpt');
@@ -65,6 +70,7 @@
         } else {
     text.style.lineHeight = heightSelected;
         }
+        localStorage.setItem('lineHeight', heightSelected);
     }
 
     let mudaLineHeight = document.querySelector('#lineHeightSelect');
@@ -79,6 +85,7 @@
             text.style.color = txtColorSelected;
             body.style.color = txtColorSelected;
             textPastedBox.style.color = txtColorSelected;
+            localStorage.setItem('colorTxt', txtColorSelected);
         }
 
         changeColorTxt();
@@ -87,6 +94,7 @@
             let bgColorSelected = document.querySelector('#fundoCor').value;
             let bodyColor = document.querySelector('body');
         bodyColor.style.backgroundColor = bgColorSelected;
+        localStorage.setItem('colorBg', bgColorSelected);
 
         }
 
@@ -96,3 +104,4 @@
     let botaoMudar = document.querySelector('.change');
 
     botaoMudar.addEventListener('click', changeColors);
+}
