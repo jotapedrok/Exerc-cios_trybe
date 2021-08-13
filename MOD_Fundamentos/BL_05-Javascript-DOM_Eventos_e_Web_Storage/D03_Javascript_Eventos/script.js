@@ -152,8 +152,8 @@ function colorTask (cor) {
 colorTask('red');
 
                     //Exercicio 9
+let taskSelectList = document.getElementsByClassName('selected');
 function selectTask (event) {
-    let taskSelectList = document.getElementsByClassName('selected');
     if (taskSelectList.length === 0) {
     event.target.classList.add('selected');
     event.target.style.border = 'solid black';
@@ -164,5 +164,23 @@ function selectTask (event) {
 }
 
 let tasks = document.querySelector('.task');
+
 tasks.addEventListener('click', selectTask);
 
+                    //Exercicio 10
+function changeDayColor (event) {
+    let colorOfTask
+    if (taskSelectList.length === 0) {
+    colorOfTask = '';
+    } else {
+    colorOfTask = document.querySelector('.selected').style.backgroundColor;
+    }
+    let grayColor = '#777';
+    if (taskSelectList.length === 0) {
+        event.target.style.color = grayColor;
+    } else {
+    event.target.style.color = colorOfTask;
+    }
+}
+
+days.addEventListener('click', changeDayColor);
