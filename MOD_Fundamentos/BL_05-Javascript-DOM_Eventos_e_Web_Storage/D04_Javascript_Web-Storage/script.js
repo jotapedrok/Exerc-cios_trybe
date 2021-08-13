@@ -28,7 +28,7 @@
             let inPasteBox = document.querySelector('.pasteTextBox').value;
             let spaceToPaste = document.querySelector('.textPasted');
             spaceToPaste.innerText = inPasteBox;
-            localStorage.setItem('textoEscito', spaceToPaste.innerText);
+            localStorage.setItem('lastText', spaceToPaste.innerText);
         }
         let botaoLer = document.querySelector('#lerButton');
 
@@ -104,4 +104,30 @@
     let botaoMudar = document.querySelector('.change');
 
     botaoMudar.addEventListener('click', changeColors);
+
+    function saveds(){
+        // Variavies dos dados salvos
+        let savedTxt = localStorage.getItem('lastText');
+        let savedFontFamily = localStorage.getItem('fontFamily');
+        let savedFontSize = localStorage.getItem('fontSize');
+        let savedLineHeight = localStorage.getItem('lineHeight');
+        let savedColorTxt = localStorage.getItem('colorTxt');
+        let savedColorBg = localStorage.getItem('colorBg');
+
+        // Variaveis de acesso aos locais que devem ser alterados
+        let boxOfTxt = document.querySelector('.textPasted');
+        let bodyOfPage = document.body;
+        let boxToPasteTxt = document.querySelector('.pasteTextBox');
+
+        boxOfTxt.innerText = savedTxt;
+        boxOfTxt.style.fontFamily = savedFontFamily;
+        boxOfTxt.style.fontSize = savedFontSize;
+        boxOfTxt.style.lineHeight = savedLineHeight;
+        boxOfTxt.style.color = savedColorTxt;
+        bodyOfPage.style.color = savedColorTxt;
+        boxToPasteTxt.style.color = savedColorTxt;
+        bodyOfPage.style.backgroundColor = savedColorBg;
+
+    }
+    saveds();
 }
