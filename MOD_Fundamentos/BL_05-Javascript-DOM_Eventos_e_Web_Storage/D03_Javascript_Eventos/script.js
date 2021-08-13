@@ -197,6 +197,7 @@ function addCompromisses () {
     compromisseLi.innerText = compromisseInput.value;
 
     listTask.appendChild(compromisseLi);
+    compromisseInput.value = ''
     } else {
         alert('Erro: Nenhum caractere encontrado');
     }
@@ -208,6 +209,7 @@ buttonAdd.addEventListener('click', byClick);
             compromisseLi.innerText = compromisseInput.value;
 
         listTask.appendChild(compromisseLi);
+        compromisseInput.value = ''
         } else if (event.keyCode === 13 && compromisseInput.value.length <= 0) {
             alert('Erro: Nenhum caractere encontrado')
         }
@@ -215,3 +217,22 @@ buttonAdd.addEventListener('click', byClick);
 compromisseInput.addEventListener('keyup', byEnter);
 }
 addCompromisses()
+
+                    // Bônus Pessoal
+function deleteTasks () {
+    let btnRefresh = document.createElement('button');
+    btnRefresh.id = 'refresh';
+    btnRefresh.innerText = 'Apagar Compromissos';
+
+    let contentCpm = document.querySelector('.input-container');
+    contentCpm.appendChild(btnRefresh);
+    
+    function deleting () {
+        var elemento = document.querySelector('.task-list');
+        while (elemento.firstChild) {
+        elemento.removeChild(elemento.firstChild);
+        }
+    }
+btnRefresh.addEventListener('click', deleting);
+}
+deleteTasks ()
