@@ -20,7 +20,7 @@ function fontFamilyPossibles() {
 }
 
  fontFamilyPossibles();
- 
+
 // DESISTI DE USAR:
 // function lineHeightPossibles() {
 //     let possibleLineHeight = [0.75, 1, 1.5, 2, 2.5, 3, 4];
@@ -83,3 +83,24 @@ let mudaLineHeight = document.querySelector('#lineHeightSelect');
 
 mudaLineHeight.addEventListener('change', changeLineHeight);
 
+function changeColors () {
+    function changeColorTxt () {
+        let txtColorSelected = document.querySelector('#textoCor').value;
+        text.style.color = txtColorSelected;
+    }
+
+    changeColorTxt();
+
+    function changeColorBg () {
+        let bgColorSelected = document.querySelector('#fundoCor').value;
+        let bodyColor = document.querySelector('body').style.backgroundColor;
+    bodyColor = bgColorSelected;
+
+    }
+
+    changeColorBg();
+}
+
+let botaoMudar = document.querySelector('.change');
+
+botaoMudar.addEventListener('click', changeColors);
