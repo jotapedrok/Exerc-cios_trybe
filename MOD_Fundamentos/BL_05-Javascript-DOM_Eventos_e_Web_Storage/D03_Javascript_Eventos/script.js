@@ -184,3 +184,34 @@ function changeDayColor (event) {
 }
 
 days.addEventListener('click', changeDayColor);
+
+                    // BÔNUS
+function addCompromisses () {
+    let compromisseInput = document.querySelector('#task-input');
+    let compromisseLi = document.createElement('li');
+    let buttonAdd = document.querySelector('#btn-add');
+    let listTask = document.querySelector('.task-list');
+
+    function byClick () {
+    if (compromisseInput.value.length > 0) {
+    compromisseLi.innerText = compromisseInput.value;
+
+    listTask.appendChild(compromisseLi);
+    } else {
+        alert('Erro: Nenhum caractere encontrado');
+    }
+}
+buttonAdd.addEventListener('click', byClick);
+
+    function byEnter (event) {
+        if (event.keyCode === 13 && compromisseInput.value.length > 0) {
+            compromisseLi.innerText = compromisseInput.value;
+
+        listTask.appendChild(compromisseLi);
+        } else if (event.keyCode === 13 && compromisseInput.value.length <= 0) {
+            alert('Erro: Nenhum caractere encontrado')
+        }
+    }
+compromisseInput.addEventListener('keyup', byEnter);
+}
+addCompromisses()
