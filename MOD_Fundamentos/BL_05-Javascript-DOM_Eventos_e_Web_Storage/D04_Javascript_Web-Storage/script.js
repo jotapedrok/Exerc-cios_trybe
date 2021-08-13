@@ -37,6 +37,22 @@ function pasteText () {
         let spaceToPaste = document.querySelector('.textPasted');
         spaceToPaste.innerText = inPasteBox;
     }
-    document.addEventListener('click', pasting)
+    let botaoLer = document.querySelector('#lerButton')
+
+    botaoLer.addEventListener('click', pasting)
 }
 pasteText()
+
+
+
+function changeFontSize () {
+    let text = document.querySelector('.textPasted');
+    let sizeSelected = document.querySelector('#tamanhoFonte').value;
+   text.style.fontSize = sizeSelected + "px"
+}
+
+changeFontSize()
+
+let mudaFonte = document.querySelector('#tamanhoFonte');
+
+mudaFonte.addEventListener('change', changeFontSize);

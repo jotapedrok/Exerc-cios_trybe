@@ -12,7 +12,7 @@
         <fieldset class="textConf">
             <div id ="containerFontSize" class="confTextBox">
             <p class="withoutBorder">Tamanho Da Fonte:</p>
-            <input type="number" min="8" max="400" list="fontsize" placeholder="14" style="margin-left: 35px;" class="tamanhoFonte">
+            <input type="number" min="8" max="400" list="fontsize" placeholder="14" style="margin-left: 35px;" id="tamanhoFonte">
             </div>
             <div id="containerFontFamily" class="confTextBox">
                 <p class="withoutBorder" style="margin-bottom: 5px;">Tipo da Fonte:</p>
@@ -20,7 +20,7 @@
             </div>
             <div id="containerFontHeight" class="confTextBox">
                 <p class="withoutBorder">Espaçamento</p>
-                <input type="number" step="0.25" min="0.75" max="400" list="lineHeight" placeholder="1" class="tamanhoFonte" style="object-position: center; width: 80px; margin-left: 30px;">
+                <input type="number" step="0.25" min="0.75" max="400" list="lineHeight" placeholder="1.25" class="tamanhoFonte" style="object-position: center; width: 80px; margin-left: 30px;">
             </div>
         </fieldset>
         <datalist id="fontsize"></datalist>
@@ -35,7 +35,7 @@
                 <input type="color" style="margin-left: 45px; margin-top: 5px;" value="#DCDCDC">
             </div>
             <div class="confTextBox">
-                <input type="button" value="Mudar">
+                <input class="change" type="button" value="Mudar">
             </div>
         </fieldset>
     </div>
@@ -45,7 +45,7 @@
     <section>
         <textarea row= 23 class="pasteTextBox" placeholder="Cole seu texto aqui"></textarea>
     </section>
-    <input type="button" value="Ler" style="font-size: large; width: 100px; font-weight: bold;">
+    <input id="lerButton" type="button" value="Ler" style="font-size: large; width: 100px; font-weight: bold;">
     <script src="script.js"></script>
 </body>
 </html>
