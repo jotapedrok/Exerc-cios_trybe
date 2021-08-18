@@ -32,7 +32,7 @@
       </div>
       <div class="lines">
         <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" max="28" placeholder="Sua Cidade" required>
+        <input type="text" id="cidade" name="cidade" maxlength="28" placeholder="Sua Cidade" required>
       </div>
       <div class="lines">
         <label for="estado">Estado:</label>
@@ -46,6 +46,27 @@
           <label for="ap">Apartamento</label>
           <input type="radio" id="ap" name="tipo-moradia" required>
         </fieldset>
+      </div>
+    </fieldset>
+    <fieldset class="fieldset">
+      <legend>Sobre seu último emprego</legend>
+      <div class="lines">
+        <label for="vitae-resum">Resumo do currículo</label>
+        <textarea name="resumo-curriculo" id="vitae-resum" cols="35" rows="5" maxlength="1000" placeholder="digite aqui" required></textarea>
+      </div>
+      <div class="lines">
+        <label for="cargo">Cargo:</label>
+        <input type="text" name="cargo-anterior" id="cargo" placeholder="Seu cargo anterior" maxlength="40" required>
+      </div>
+      <div class="lines">
+        <label for="cargo-descriçao">Descrição do Cargo</label>
+        <input type="text" name="descriçao-cargo" id="cargo-descriçao" placeholder="descrição do cargo" maxlength="500" required>
+      </div>
+      <div class="lines">
+        <label for="inicio-data">Data de início</label>
+        <input type="date" name="data-inicio" id="inicio-data" required>
+      </div>
+      <div class="lines">
       </div>
     </fieldset>
   </form>
