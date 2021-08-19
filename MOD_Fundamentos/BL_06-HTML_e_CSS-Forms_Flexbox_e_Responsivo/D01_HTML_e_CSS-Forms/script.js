@@ -116,7 +116,7 @@ function afterClick(event) {
    '<p>Tipo de Moradia: ' + moradiaType() + '</p>' + 
  '</div>' + 
  '<div class="lines containers">' + 
-   '<p>Resumo currículo: ' + resumVitae.value + '</p>' + 
+   '<p style.maxWidth = "200px";>Resumo currículo: ' + resumVitae.value + '</p>' + 
  '</div>' + 
  '<div class="lines">' + 
    '<p>Cargo anterior: ' + cargo.value + '</p>' + 
@@ -130,3 +130,9 @@ function afterClick(event) {
   }
  }
 btnSend.addEventListener('click', afterClick);
+
+const btnClear = document.querySelector('#clean');
+btnClear.addEventListener('click', function() {
+  divResult.className = '';
+  divResult.innerHTML = '';
+});
