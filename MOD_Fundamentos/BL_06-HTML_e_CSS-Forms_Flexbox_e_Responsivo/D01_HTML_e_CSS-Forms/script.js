@@ -9,3 +9,34 @@ function addStates() {
   }
 }
 addStates();
+
+function validateTxt(inputName, maxLength) {
+  if (inputName.value === '' || inputName.value.length > maxLength) {
+    alert('Campo ' + inputName.name + ' inválido');
+  }
+}
+
+const namers = document.querySelector('#name');
+const email = document.querySelector('#email');
+const cpf = document.querySelector('#cpf');
+const endereço = document.querySelector('#endereço');
+const cidade = document.querySelector('#cidade')
+const btnSend = document.querySelector('#submit');
+const resumVitae = document.querySelector('#vitae-resum');
+const cargo = document.querySelector('#cargo');
+const cargoDescri = document.querySelector('#cargo-descriçao');
+
+function afterClick(event) {
+  event.preventDefault();
+
+  validateTxt(namers, 40);
+  validateTxt(email, 50);
+  validateTxt(cpf, 11);
+  validateTxt(endereço, 200);
+  validateTxt(cidade, 28);
+  validateTxt(resumVitae, 1000);
+  validateTxt(cargo, 40);
+  validateTxt(cargoDescri, 500);
+
+}
+btnSend.addEventListener('click', afterClick);
