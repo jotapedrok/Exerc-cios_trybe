@@ -12,7 +12,7 @@ addStates();
 
 function validateTxt(inputName, maxLength) {
   if (inputName.value === '' || inputName.value.length > maxLength) {
-    console.log('Campo "' + inputName.name + '" inválido');
+    alert('Campo "' + inputName.name + '" inválido');
     errors.push('X');
   }
 }
@@ -59,17 +59,17 @@ function afterClick(event) {
   function validateData() {
     if (data.length === 10 && data[2] === '/' && data[5] === '/') {
       if (year.length < 4) {
-        console.log('Formato de ano incorreto');
+        alert('Formato de ano incorreto');
         errors.push('X');
       } else if (parseInt(day) < 0 || parseInt(day) > 31) {
-        console.log('Dia Inválido');
+        alert('Dia Inválido');
         errors.push('X');
       } else if (parseInt(month) < 0 || parseInt(month) > 12) {
-        console.log('Mês Inválido');
+        alert('Mês Inválido');
         errors.push('X');
       }
     } else {
-      console.log('Campo "Data de início" inválido');
+      alert('Campo "Data de início" inválido');
       errors.push('X');
     }
   }
@@ -77,16 +77,56 @@ function afterClick(event) {
 
   function validateTypeHouse() {
     if (casa.checked === false && ap.checked === false) {
-      console.log('Selecione um "Tipo de moradia');
+      alert('Selecione um "Tipo de moradia');
       errors.push('X');
     }
   }
   validateTypeHouse();
+
+  function moradiaType() {
+    if (casa.checked === true) {
+      return 'Casa'
+    } else {
+      return 'Apartamento'
+    }
+  }
+
+  const divResult = document.querySelector('#result');
+  divResult.className = 'containers'
  if (errors.length === 0) {
-   const divA = document.createElement('div');
-   divA.className = 'containers';
-   divA.innerHTML = 
-   document.body.appendChild(divA);
- } if 
-}
+   divResult.innerHTML = '<div class="lines">' + 
+   '<p>Nome: ' + namers.value + '</p>' + 
+ '</div>' + 
+ '<div class="lines">' + 
+   '<p>Email: ' + email.value + '</p>' + 
+ '</div>' + 
+ '<div class="lines">' + 
+   '<p>CPF: ' + cpf.value + '</p>' + 
+ '</div>' + 
+ '<div class="lines">' + 
+   '<p>Endereço: ' + endereço.value + '</p>' + 
+ '</div>' + 
+ '<div class="lines">' + 
+   '<p>Cidade: ' + cidade.value + '</p>' + 
+ '</div>' + 
+ '<div class="lines">' + 
+   '<p>Estado: ' + estado.value + '</p>' + 
+ '</div>' + 
+ '<div class="lines">' + 
+   '<p>Tipo de Moradia: ' + moradiaType() + '</p>' + 
+ '</div>' + 
+ '<div class="lines containers">' + 
+   '<p>Resumo currículo: ' + resumVitae.value + '</p>' + 
+ '</div>' + 
+ '<div class="lines">' + 
+   '<p>Cargo anterior: ' + cargo.value + '</p>' + 
+ '</div>' + 
+ '<div class="lines">' + 
+   '<p>Descrição do cargo: ' + cargoDescri.value + '</p>' + 
+ '</div>' + 
+ '<div class="lines">' + 
+   '<p>Data de início: ' + datai.value + '</p>' + 
+ '</div>';
+  }
+ }
 btnSend.addEventListener('click', afterClick);
