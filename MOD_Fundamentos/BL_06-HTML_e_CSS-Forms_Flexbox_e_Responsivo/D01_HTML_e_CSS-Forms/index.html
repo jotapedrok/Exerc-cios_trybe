@@ -42,9 +42,9 @@
         <fieldset class="fieldset">
           <legend>Tipo de moradia</legend>
           <label for="casa">Casa</label>
-          <input type="radio" id="casa" name="tipo-moradia" required>
+          <input type="radio" id="casa" name="tipo-moradia" value="casa" required>
           <label for="ap">Apartamento</label>
-          <input type="radio" id="ap" name="tipo-moradia" required>
+          <input type="radio" id="ap" name="tipo-moradia" value="ap" required>
         </fieldset>
       </div>
     </fieldset>
@@ -65,7 +65,7 @@
       </div>
       <div class="lines">
         <label for="inicio-data">Data de início</label>
-        <input type="date" name="data-inicio" id="inicio-data" required>
+        <input type="text" name="data-inicio" id="inicio-data" placeholder="dd/mm/aaaa" maxlength="10" required>
       </div>
       <div class="lines">
       </div>
