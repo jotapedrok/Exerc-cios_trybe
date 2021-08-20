@@ -15,7 +15,7 @@
     <h1 class="display-3">Formulário de Currículo</h1>
     <p class="lead"><em>Preencha os dado abaixo:</em></p>
   </header>
-  <form action="" method="GET" class="containers">
+  <form id="myForm" action="" method="GET" class="containers">
     <div class="container">
       <legend>Dados Pessoais</legend>
       <div class="mb-3">
@@ -94,6 +94,7 @@
   integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
   crossorigin="anonymous"></script>
   <script src="./dist/js/DatePickerX.min.js"></script>
+  <script src="./validation.min.js"></script>
   <script>
     window.addEventListener('DOMContentLoaded', function() {
   const myDate = document.querySelector('#datepicker');
@@ -104,8 +105,8 @@
 
   });
 });
+validation.init(document.querySelector('#myForm'));
   </script>
-  <script src="./validation.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
