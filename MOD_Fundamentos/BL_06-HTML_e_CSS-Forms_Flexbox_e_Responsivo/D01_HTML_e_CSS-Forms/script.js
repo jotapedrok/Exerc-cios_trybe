@@ -10,6 +10,14 @@ function addStates() {
 }
 addStates();
 
+function moradia() {
+  if (casa.checked) {
+    return "Casa"
+  } else if (ap.checked) {
+    return "Apartamento"
+  }
+}
+
 function validateTxt(inputName, maxLength) {
   if (inputName.value === '' || inputName.value.length > maxLength) {
     alert('Campo "' + inputName.name + '" inválido');
@@ -36,6 +44,8 @@ function moradia() {
     return "Casa"
   } else if (ap.checked === true) {
     return "Apartamento"
+  } else {
+    errors.push('X');
   }
 }
 let errors = []
@@ -52,7 +62,7 @@ function afterClick(event) {
   validateTxt(cargo, 40);
   validateTxt(cargoDescri, 500);
 
-  const data = document.querySelector('#inicio-data').value;
+  const data = document.querySelector('#datepicker').value;
   const day = data[0] + data[1];
   const month = data[3] + data[4];
   const year = data[6] + data[7] + data[8] + data[9];
@@ -75,14 +85,6 @@ function afterClick(event) {
   }
   validateData();
 
-  function validateTypeHouse() {
-    if (casa.checked === false && ap.checked === false) {
-      alert('Selecione um "Tipo de moradia');
-      errors.push('X');
-    }
-  }
-  validateTypeHouse();
-
   function moradiaType() {
     if (casa.checked === true) {
       return 'Casa'
@@ -91,42 +93,50 @@ function afterClick(event) {
     }
   }
 
-  const divResult = document.querySelector('#result');
-  divResult.className = 'containers'
- if (errors.length === 0) {
-   divResult.innerHTML = '<div class="lines">' + 
-   '<p>Nome: ' + namers.value + '</p>' + 
- '</div>' + 
- '<div class="lines">' + 
-   '<p>Email: ' + email.value + '</p>' + 
- '</div>' + 
- '<div class="lines">' + 
-   '<p>CPF: ' + cpf.value + '</p>' + 
- '</div>' + 
- '<div class="lines">' + 
-   '<p>Endereço: ' + endereço.value + '</p>' + 
- '</div>' + 
- '<div class="lines">' + 
-   '<p>Cidade: ' + cidade.value + '</p>' + 
- '</div>' + 
- '<div class="lines">' + 
-   '<p>Estado: ' + estado.value + '</p>' + 
- '</div>' + 
- '<div class="lines">' + 
-   '<p>Tipo de Moradia: ' + moradiaType() + '</p>' + 
- '</div>' + 
- '<div class="lines containers">' + 
-   '<p>Resumo currículo: ' + resumVitae.value + '</p>' + 
- '</div>' + 
- '<div class="lines">' + 
-   '<p>Cargo anterior: ' + cargo.value + '</p>' + 
- '</div>' + 
- '<div class="lines">' + 
-   '<p>Descrição do cargo: ' + cargoDescri.value + '</p>' + 
- '</div>' + 
- '<div class="lines">' + 
-   '<p>Data de início: ' + datai.value + '</p>' + 
- '</div>';
+/* ▾▾▾Funções retiradas e baseadas no código de Diego Brito - Turma 15, Tribo A▾▾▾▾*/
+
+  const returno = {
+
+    Nome: selectElements("#","name"),
+    Email: selectElements("#","email"),
+    CPF:  selectElements("#","cpf"),
+    Endereço: selectElements("#","endereço"),
+    Cidade: selectElements("#","cidade"),
+    Estado: selectElements("#", "estado"),
+    'Tipo de Moradia': moradia(),
+    'Resumo do currículo': selectElements("#", "vitae-resum"),
+    'Emprego Anterior': selectElements("#", "cargo"),
+    'Descrição do Cargo': selectElements("#", "cargo-descriçao"),
+    'Data de início': selectElements("#", "datepicker")
+    }
+
+  function selectElements(id, nameId){
+  
+    return document.querySelector(`${id}${nameId}`).value;
   }
- }
-btnSend.addEventListener('click', afterClick);
+
+  function divRetorno() {
+      let tamanho = Object.keys(returno);
+      const resultDiv = document.querySelector('#result')
+      if (errors.length === 0) {
+        for (let i = 0; i < tamanho.length; i += 1) {
+          const parag = document.createElement('p')
+          parag.innerText = Object.keys(returno)[i] + ': ' + Object.values(returno)[i];
+          resultDiv.appendChild(parag);
+        }
+      }
+    }
+    divRetorno();
+}
+
+btn = document.querySelector('#submit');
+btn.addEventListener('click', afterClick);
+const divResult = document.querySelector('#results')
+
+function removeDiv() {
+  const body = document.body;
+  body.removeChild(body.children[2]);
+}
+
+const btnClear = document.querySelector('#clean');
+btnClear.addEventListener('click', removeDiv);
