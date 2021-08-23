@@ -57,6 +57,7 @@ body {
 .movie-container div {
   display: flex;
   flex-basis: 16%;
+  flex-grow: 1;
 }
 
 .movie-container h2 {
