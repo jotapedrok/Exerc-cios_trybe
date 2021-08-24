@@ -16,4 +16,89 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   }
   addStates();
+  const form = document.querySelector('.js-form');
+
+  new window.JustValidate(form, {
+    rules: {
+      name: {
+        required: true,
+        maxLength: 40,
+      },
+      email: {
+        required: true,
+        maxLength: 50
+      },
+      cpf: {
+        required: true,
+        maxLength: 11,
+      },
+      address: {
+        required: true,
+        maxLength: 200,
+      },
+      city: {
+        required: true,
+        maxLength: 28,
+      },
+      houseType: {
+        required: true,
+      },
+      vitaeResum:{
+        required: true,
+        maxLength: 1000,
+      },
+      previousPosition: {
+        required: true,
+        maxLength: 40,
+      },
+      jobDescription: {
+        required: true,
+        maxLength: 500,
+      },
+      date: {
+        required: true,
+      }
+    },
+    messages: {
+      name: {
+        required: 'Campo obrigatório',
+        maxLength: 'Muito Caractéres máximo de: ' + '40',
+      },
+      email: {
+        required: 'Campo obrigatório',
+        maxLength: 'Muito Caractéres máximo de: ' + '50',
+      },
+      cpf: {
+        required: 'Campo obrigatório',
+        maxLength: 'Muito Caractéres máximo de: ' + '11',
+      },
+      address: {
+        required: 'Campo obrigatório',
+        maxLength: 'Muito Caractéres máximo de: ' + '200',
+      },
+      city: {
+        required: 'Campo obrigatório',
+        maxLength: 'Muito Caractéres máximo de: ' + '28',
+      },
+      houseType: {
+        required: 'Campo obrigatório',
+      },
+      vitaeResum:{
+        required: 'Campo obrigatório',
+        maxLength: 'Muito Caractéres máximo de: ' + '1000',
+      },
+      previousPosition: {
+        required: 'Campo obrigatório',
+        maxLength: 'Muito Caractéres máximo de: ' + '40',
+      },
+      jobDescription: {
+        required: 'Campo obrigatório',
+        maxLength: 'Muito Caractéres máximo de: ' + '500',
+      },
+      date: {
+        required: 'Campo obrigatório',
+      }
+    },
+    focusWrongField: true,
+  })
 });
