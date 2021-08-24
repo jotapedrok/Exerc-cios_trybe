@@ -1,61 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <title>DatePickerX</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just-validate</title>
 
-    <script src="../dist/js/DatePickerX.min.js"></script>
-    <script>
-        window.addEventListener('DOMContentLoaded', function()
-        {
-            var $min = document.querySelector('.real [name="realDPX-min"]'),
-                $max = document.querySelector('.real [name="realDPX-max"]');
+  <style>
+    header {
+      text-align: center;
+    }
 
-            $min.DatePickerX.init({
-                mondayFirst: true,
-                minDate    : new Date(2021, 5, 9),
-                maxDate    : $max
-            });
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-            $max.DatePickerX.init({
-                mondayFirst: true,
-                minDate    : $min,
-                maxDate    : function()
-                {
-                    var date = new Date();
-                    return new Date().setDate(date.getDate() + 10);
-                },
-                clearButton: false
-            });
-
-        });
-    </script>
-    <link rel="stylesheet" href="../dist/css/DatePickerX.css">
-    <style>
-        body {
-            padding: 50px;
-        }
-        label {
-            display: inline-block; 
-            margin-bottom: 500px;
-            width: 30%;
-        }
-        .real {
-            width: 45%;
-        }
-    </style>
+    label,
+    button {
+      margin-top: 10px;
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <h1>Just-validate</h1>
+  </header>
+  <form>
 
-<div>
-    <label class="real">
-        <input type="text" name="realDPX-min" placeholder="Choice start date">
-    </label>
+    <!-- Adicionar nas tags input o atribut data-validate-field="identificador" -->
+    <label for="name">Nome</label>
+    <input type="text" name="name" id="name" data-validate-field="name"> <!-- identificador predefinido-->
 
-    <label class="real">
-        <input type="text" name="realDPX-max" placeholder="Choice end date">
-    </label>
-</div>
+    <label for="email">E-mail</label>
+    <input type="text" name="email" id="email" data-validate-field="email">
 
+    <label for="numero">Apenas números</label>
+    <input type="text" name="numero" id="numero" data-validate-field="num">
+
+    <button>Enviar</button>
+  </form>
+
+  <!-- Adicionado tag script após executar comando (npm install just-validate --save) na pasta do projeto. -->
+  <script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
+
+  <script>
+    function corta(event) {
+        event.preventDefault();
+    }
+    document.querySelector('button').onclick = corta;
+    
+    const regEx = /^\d*$/; // Regular Expression para números inteiros
+
+    // Objeto para regras
+    const rules = {
+      rules: {
+        num: {
+          required: true,
+          strength: {
+            custom: regEx
+          }
+        }
+      },
+      messages: {
+        num: {
+          strength: 'Apenas números'
+        }
+      },
+      focusWrongField: true,
+    }
+
+
+    // Aplicando regras da biblioteca ao formulário e objeto com regras customizadas
+    new JustValidate('form', rules);
+  </script>
 </body>
+
 </html>
