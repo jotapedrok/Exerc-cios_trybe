@@ -10,6 +10,66 @@ function addStates() {
 }
 addStates();
 
+const Inteiros = /^\d*$/;
+
+const rules = {
+    namex: {
+      required: true,
+      minLength: 1,
+      maxLength: 40,
+    },
+    emailx: {
+      required: true,
+      minLength: 1,
+      maxLength: 50,
+    },
+    cpfx: {
+      required: true,
+      minLength: 1,
+      maxLength: 11,
+    },
+    endereçox: {
+      required: true,
+      minLength: 1,
+      maxLength: 200,
+    },
+    cidadex: {
+      required: true,
+      minLength: 1,
+      maxLength: 28,
+    },
+    estadox: {
+      required: true,
+    },
+    moradiax: {
+      required: true,
+    },
+    resumVitaex: {
+      required: true,
+      minLength: 1,
+      maxLength: 1000,
+    },
+    cargox: {
+      required: true,
+      minLength: 1,
+      maxLength: 40,
+    },
+    cargoDescrix: {
+      required: true,
+      minLength: 1,
+      maxlength: 500,
+    },
+    dataIniciox: {
+      required: true,
+      strength: {
+        custom: Inteiros,
+      }
+    },
+    focusWrongField: true,
+  }
+
+new JustValidate('form', rules);
+
 function moradia() {
   if (casa.checked) {
     return "Casa"
@@ -20,7 +80,6 @@ function moradia() {
 
 function validateTxt(inputName, maxLength) {
   if (inputName.value === '' || inputName.value.length > maxLength) {
-    alert('Campo "' + inputName.name + '" inválido');
     errors.push('X');
   }
 }
@@ -69,29 +128,31 @@ function afterClick(event) {
   function validateData() {
     if (data.length === 10 && data[2] === '/' && data[5] === '/') {
       if (year.length < 4) {
-        alert('Formato de ano incorreto');
         errors.push('X');
+        return false;
       } else if (parseInt(day) < 0 || parseInt(day) > 31) {
-        alert('Dia Inválido');
         errors.push('X');
+        return false;
       } else if (parseInt(month) < 0 || parseInt(month) > 12) {
-        alert('Mês Inválido');
         errors.push('X');
+        return false;
+      } else {
+        return true;
       }
     } else {
-      alert('Campo "Data de início" inválido');
       errors.push('X');
+      return false;
     }
   }
   validateData();
 
-  function moradiaType() {
-    if (casa.checked === true) {
-      return 'Casa'
-    } else {
-      return 'Apartamento'
-    }
-  }
+  // function moradiaType() {
+  //   if (casa.checked === true) {
+  //     return 'Casa'
+  //   } else {
+  //     return 'Apartamento'
+  //   }
+  // }
 
 /* ▾▾▾Funções retiradas e baseadas no código de Diego Brito - Turma 15, Tribo A▾▾▾▾*/
 
@@ -130,6 +191,7 @@ function afterClick(event) {
 }
 
 btn = document.querySelector('#submit');
+btn.addEventListener('click', JustValidate);
 btn.addEventListener('click', afterClick);
 const divResult = document.querySelector('#results')
 
