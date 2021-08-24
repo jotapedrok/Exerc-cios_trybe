@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="./DatePickerX-master/dist/css/DatePickerX.min.css">
 </head>
 <body>
   <header class="container">
-    <h1>Formulário de Currículo</h1>
-    <p>Preencha os campos abaixo:</p>
+    <h1 class="display-1">Formulário de Currículo</h1>
+    <p class="lead"><em>Preencha os campos abaixo:</em></p>
   </header>
   <main class="container">
     <form action="" method="GET">
       <section class="container">
-        <h3>Dados Pessoais</h3>
+        <h3 class="display-6">Dados Pessoais</h3>
         <div class="container">
           <label for="name">Nome:</label>
           <input class="form-control" type="text" name="name" id="name" placeholder="Seu nome">
@@ -38,7 +39,7 @@
         </div>
         <div class="container">
           <label for="state">Estado:</label>
-          <select id="state" name="state"></select>
+          <select class="form-select" id="state" name="state"></select>
         </div>
         <span class="container">Tipo de Moradia:</span>
         <div class="container input-group">
@@ -52,8 +53,9 @@
           </div>
         </div>
       </section>
+      <br>
       <section class="container">
-        <h3>Dados Curriculares</h3>
+        <h3 class="display-6">Dados Curriculares</h3>
         <div class="container">
          <label for="resum-vitae">Resumo do currículo:</label>
          <br>
@@ -82,6 +84,7 @@
       </section>
     </form>
   </main>
+<script src="./DatePickerX-master/dist/js/DatePickerX.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
