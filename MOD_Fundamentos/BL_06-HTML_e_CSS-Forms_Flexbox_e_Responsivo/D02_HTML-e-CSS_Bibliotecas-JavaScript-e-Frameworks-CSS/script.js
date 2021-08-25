@@ -17,9 +17,7 @@ window.addEventListener('DOMContentLoaded', function() {
   }
   addStates();
  
-    // retirado do diretório git de Igorcosta
-    //link: https://gist.github.com/igorcosta/3a4caa954a99035903ab ▾
-  const regexCpf = /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/;
+  const regexInteiros = /^\d*$/;
 
   const rules = {
     rules: {
@@ -35,7 +33,7 @@ window.addEventListener('DOMContentLoaded', function() {
         required: true,
         maxLength: 11,
         strength: {
-        custom: regexCpf,
+        custom: regexInteiros,
         },
       },
       address: {
@@ -110,4 +108,73 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   new JustValidate('form', rules);
+
+  const casa = document.querySelector('#house');
+  const ap = document.querySelector('#apart');
+  function moradia() {
+    if (casa.checked) {
+      return "Casa"
+    } else if (ap.checked) {
+      return "Apartamento"
+    }
+  }
+
+  const section = document.querySelector('.div');
+
+  function mkDiv(event) {
+    let go = 'great';
+    if (document.querySelectorAll('.js-validate-error-label').length === 0) {
+      const callBack = {
+        Nome: selectElements("#","name"),
+        Email: selectElements("#","email"),
+        CPF:  selectElements("#","cpf"),
+        Endereço: selectElements("#","address"),
+        Cidade: selectElements("#","city"),
+        Estado: selectElements("#", "state"),
+        'Tipo de Moradia': moradia(),
+        'Resumo do currículo': selectElements("#", "resum-vitae"),
+        'Emprego Anterior': selectElements("#", "previousPosition"),
+        'Descrição do Cargo': selectElements("#", "jobDescription"),
+        'Data de início': selectElements("#", "date")
+        }
+        const callBackLength = Object.keys(callBack);
+    
+      function selectElements(id, nameId){
+        return document.querySelector(`${id}${nameId}`).value;
+      }
+
+      for (let i = 0; i < callBackLength.length; i += 1) {
+          if (Object.values(callBack)[i] === "") {
+          return go = 'error';
+            } 
+          }
+
+
+        if (go === "great") {
+          const backDiv = document.querySelector('.divReturn');
+          section.removeChild(backDiv);
+          const returnDiv = document.createElement('div');
+          returnDiv.className = 'divReturn';
+          section.appendChild(returnDiv);
+          for (let i = 0; i < callBackLength.length; i += 1) {
+            const paragraph = document.createElement('p');
+            paragraph.className = 'pReturn';
+            paragraph.innerHTML = Object.keys(callBack)[i] + ': ' + Object.values(callBack)[i];
+            returnDiv.appendChild(paragraph);
+          }
+        }
+      }
+    };
+
+  const btnSend = document.querySelector('#submit');
+  btnSend.addEventListener('click', mkDiv);
+
+  function removeDiv() {
+    const backDiv2 = document.querySelector('.divReturn');
+    section.removeChild(backDiv2);
+  }
+  
+  const btnClear = document.querySelector('#clear');
+  btnClear.addEventListener('click', removeDiv);
+
 });
