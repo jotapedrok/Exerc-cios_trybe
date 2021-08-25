@@ -1,0 +1,13 @@
+.div {
+  border: solid 1px #e2e2e2;
+  border-radius: 5px;
+  background-color: #f0eeee;
+  font-size: 20px;
+  margin: 20px auto;
+}
+
+.pReturn {
+  padding: 3px;
+  margin: 2px;
+  font-weight: bold;
+}
