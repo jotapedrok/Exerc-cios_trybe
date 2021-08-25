@@ -19,23 +19,23 @@
         <h3 class="display-6">Dados Pessoais</h3>
         <div class="container form-group">
           <label for="name">Nome:</label>
-          <input class="form-control form__input" type="text" name="name" id="name" placeholder="Seu nome">
+          <input class="form-control form__input" data-validate-field="name" type="text" name="name" id="name" placeholder="Seu nome">
         </div>
         <div class="container form-group">
           <label for="email">Email:</label>
-          <input class="form-control form__input" type="text" name="email" id="email" placeholder="Seu email">
+          <input class="form-control form__input" data-validate-field="email" type="text" name="email" id="email" placeholder="Seu email">
         </div>
         <div class="container form-group">
           <label for="cpf">CPF:</label>
-          <input class="form-control form__input" type="text" name="cpf" id="cpf" placeholder="Seu CPF">
+          <input class="form-control form__input" data-validate-field="cpf" type="text" name="cpf" id="cpf" placeholder="Seu CPF">
         </div>
         <div class="container form-group">
           <label for="address">Endereço:</label>
-          <input class="form-control form__input" type="text" name="address" id="address" placeholder="Seu endereço">
+          <input class="form-control form__input" data-validate-field="address" type="text" name="address" id="address" placeholder="Seu endereço">
         </div>
         <div class="container form-group">
           <label for="city">Cidade:</label>
-          <input class="form-control form__input" type="text" name="city" id="city" placeholder="Sua cidade">
+          <input class="form-control form__input" data-validate-field="city" type="text" name="city" id="city" placeholder="Sua cidade">
         </div>
         <div class="container form-group">
           <label for="state">Estado:</label>
@@ -44,11 +44,11 @@
         <span class="container">Tipo de Moradia:</span>
         <div class="container input-group">
           <div class="input-group-text  form-group">
-            <input class="form-check-input mt-0 form__radio" type="radio" name="houseType" id="house" checked>
+            <input class="form-check-input mt-0 form__radio"  data-validate-field="houseType" type="radio" name="houseType" id="house" checked>
            <label for="casa">Casa</label>
           </div>
           <div class="input-group-text  form-group">
-            <input class="form-check-input mt-0 form__radio" type="radio" name="houseType" id="apart">
+            <input class="form-check-input mt-0 form__radio"  data-validate-field="houseType" type="radio" name="houseType" id="apart">
             <label for="apart">Apartamento</label>
           </div>
         </div>
@@ -59,20 +59,20 @@
         <div class="container  form-group">
          <label for="resum-vitae">Resumo do currículo:</label>
          <br>
-         <textarea class="form__textarea form-control" name="vitaeResum" id="resum-vitae" cols="80" rows="7"></textarea>
+         <textarea class="form__textarea form-control" data-validate-field="vitaeResum" name="vitaeResum" id="resum-vitae" cols="80" rows="7"></textarea>
         </div>
         <div class="container form-group">
           <label for="previousPosition">Cargo anterior:</label>
-          <input class="form-control form__input" type="text" name="previousPosition" id="previousPosition">
+          <input class="form-control form__input" data-validate-field="previousPosition" type="text" name="previousPosition" id="previousPosition">
         </div>
         <div class="container form-group">
           <label for="jobDescription">Resumo do cargo:</label>
           <br>
-          <textarea class="form__textarea form-control" name="jobDescription" id="jobDescription" cols="70" rows="4"></textarea>
+          <textarea class="form__textarea form-control"  data-validate-field="jobDescription" name="jobDescription" id="jobDescription" cols="70" rows="4"></textarea>
         </div>
         <div class="container form-group">
           <span>Data de início:</span>
-          <input class="form-control form__input" type="text" name="date" id="date">
+          <input class="form-control form__input"  data-validate-field="date" type="text" name="date" id="date">
         </div>
       </section>
       <br>

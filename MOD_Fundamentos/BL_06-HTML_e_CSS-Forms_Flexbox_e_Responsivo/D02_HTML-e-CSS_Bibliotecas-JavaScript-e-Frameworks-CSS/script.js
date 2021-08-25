@@ -16,9 +16,12 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   }
   addStates();
-  const form = document.querySelector('.js-form');
+ 
+    // retirado do diretório git de Igorcosta
+    //link: https://gist.github.com/igorcosta/3a4caa954a99035903ab ▾
+  const regexCpf = /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/;
 
-  new window.JustValidate(form, {
+  const rules = {
     rules: {
       name: {
         required: true,
@@ -31,6 +34,9 @@ window.addEventListener('DOMContentLoaded', function() {
       cpf: {
         required: true,
         maxLength: 11,
+        strength: {
+        custom: regexCpf,
+        },
       },
       address: {
         required: true,
@@ -62,43 +68,46 @@ window.addEventListener('DOMContentLoaded', function() {
     messages: {
       name: {
         required: 'Campo obrigatório',
-        maxLength: 'Muito Caractéres máximo de: ' + '40',
+        maxLength: 'Muitos Caractéres. Máximo de: ' + '40',
       },
       email: {
         required: 'Campo obrigatório',
-        maxLength: 'Muito Caractéres máximo de: ' + '50',
+        maxLength: 'Muitos Caractéres. Máximo de: ' + '50',
       },
       cpf: {
         required: 'Campo obrigatório',
-        maxLength: 'Muito Caractéres máximo de: ' + '11',
+        maxLength: 'Muitos Caractéres. Máximo de: ' + '11',
+        strength: 'CPF Inválido'
       },
       address: {
         required: 'Campo obrigatório',
-        maxLength: 'Muito Caractéres máximo de: ' + '200',
+        maxLength: 'Muitos Caractéres. Máximo de: ' + '200',
       },
       city: {
         required: 'Campo obrigatório',
-        maxLength: 'Muito Caractéres máximo de: ' + '28',
+        maxLength: 'Muitos Caractéres. Máximo de: ' + '28',
       },
       houseType: {
         required: 'Campo obrigatório',
       },
       vitaeResum:{
         required: 'Campo obrigatório',
-        maxLength: 'Muito Caractéres máximo de: ' + '1000',
+        maxLength: 'Muitos Caractéres. Máximo de: ' + '1000',
       },
       previousPosition: {
         required: 'Campo obrigatório',
-        maxLength: 'Muito Caractéres máximo de: ' + '40',
+        maxLength: 'Muitos Caractéres. Máximo de: ' + '40',
       },
       jobDescription: {
         required: 'Campo obrigatório',
-        maxLength: 'Muito Caractéres máximo de: ' + '500',
+        maxLength: 'Muitos Caractéres. Máximo de: ' + '500',
       },
       date: {
         required: 'Campo obrigatório',
       }
     },
     focusWrongField: true,
-  })
+  }
+
+  new JustValidate('form', rules);
 });
