@@ -144,8 +144,9 @@ ul {
   }
 
   .main-content {
-    margin: 20px 10px;
+    margin: 20px auto;
     font-size: 1.1em;
+    max-width: 880px;
   }
 
   .main-content h1 {
