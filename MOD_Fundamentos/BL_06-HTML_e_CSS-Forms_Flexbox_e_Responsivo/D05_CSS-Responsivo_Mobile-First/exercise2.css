@@ -104,15 +104,19 @@ ul {
 
   nav {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
+    width: 40vw;
   }
 
   nav ul {
     font-size: 0.9em;
     display: flex;
     list-style: none;
+    margin-right: 14px;
     justify-content: space-between;
-    min-width: 290px;
+    min-width: 270px;
+    max-width: 100%;
   }
 
   header {
@@ -121,7 +125,7 @@ ul {
   }
 
   header p {
-    max-width: 350px;
+    max-width: 57vw;
     text-align: left;
     margin-left: 10px;
   }
