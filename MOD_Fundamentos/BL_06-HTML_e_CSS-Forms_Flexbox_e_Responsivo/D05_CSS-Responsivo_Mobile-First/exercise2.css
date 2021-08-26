@@ -122,6 +122,7 @@ ul {
   header {
     font-size: 1.2em;
     justify-content: space-between;
+    margin-bottom: 15px;
   }
 
   header p {
@@ -142,6 +143,7 @@ ul {
   }
 
   .aside-two {
+    text-align: center;
     align-self: flex-end;
     margin: 7px 0;
     font-size: 0.9em;
@@ -159,5 +161,59 @@ ul {
 
   footer {
     font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  header {
+    margin-bottom: 0;
+  }
+
+  header p {
+    max-width: 100%;
+    margin-left: 3vw;
+  }
+
+  nav {
+    margin-right: 7vw;
+    width: 29vw;
+  }
+
+  .main-content {
+    margin: 20px 2px 20px 8px;
+    order: -1;
+    flex: 1;
+  }
+
+  .aside-container {
+    background-color: #181818;
+    margin-left: 30px;
+    margin-right: 0;
+    flex-direction: column;
+    height: 333vh;
+    justify-content: flex-start;
+  }
+
+  .aside-one {
+    margin: 70px 5px 85px;
+  }
+
+  .aside-two {
+    align-self: inherit;
+    margin-right: 5px;
+  }
+
+  main {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 333vh;
+  }
+
+  footer {
+    margin-top: 0;
+    font-size: 0.9em;
   }
 }
