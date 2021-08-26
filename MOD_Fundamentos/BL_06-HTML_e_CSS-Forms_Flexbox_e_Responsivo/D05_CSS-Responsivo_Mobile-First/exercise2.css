@@ -4,5 +4,81 @@ html {
 *,
 *:before,
 *:after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
+}
+
+body {
+  margin: 0px;
+  font-size: 19px;
+  color: #cecece;
+  background-color: #141414;
+}
+
+nav {
+  display: none;
+}
+
+header {
+  padding: 10px 0 5px;
+  background-color: #222222;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px 0 35px;
+}
+
+header p {
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+footer {
+  font-size: 0.7em;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 0;
+}
+
+.horizontal-line {
+  background-color: #cecece;
+  width: 100%;
+  height: 1px;
+  margin: 0 0 10px;
+}
+
+.aside-one {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 7px 0;
+  font-size: 0.87em;
+}
+
+.aside-one h2 {
+  font-size: 1.3em;
+}
+
+.aside-two {
+  font-size: 15px;
+  margin: 7px 0 0;
+}
+
+.aside-two h2 {
+  font-size: 1.2em;
+  margin: 0 0 4px;
+}
+
+.main-content {
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content h1 {
+  font-size: 1.1em;
 }
