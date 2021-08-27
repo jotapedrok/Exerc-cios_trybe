@@ -69,3 +69,29 @@ btn.addEventListener('click', () => {
   clickCount = clickCount + 1;
   span.innerHTML = clickCount;
 })
+
+          // Parte 2 - Exercicio 4 
+
+let stringQualquer ='Tryber x aqui!'
+const exercise4 = string => {
+  const newFrase = stringQualquer.replace(/x/gi, string);
+  return newFrase;
+}
+
+const array = ["Android", "iOS", "Architecture", "Teach", "Run"];
+const arraySort = array.sort();
+
+const resultString = exercise4('Jotapedrok');
+let skills = '';
+const exercise4_2 = (x) => {
+  for (let i in array) {
+    skills = `${skills} 
+    ${array[i]}`
+  }
+  let back = `${x}
+  Minhas skill são: ${skills}`;
+
+  console.log(back);
+}
+
+exercise4_2(resultString);
