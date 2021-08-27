@@ -58,3 +58,14 @@ const biggerWord = string => {
 }
 
 biggerWord('seu cuca bebe água de hipopotamos');
+
+          // Parte 2 - Exercicio 3
+
+const btn = document.querySelector('button');
+const span = document.querySelector('span');
+let clickCount = 0;
+
+btn.addEventListener('click', () => {
+  clickCount = clickCount + 1;
+  span.innerHTML = clickCount;
+})
