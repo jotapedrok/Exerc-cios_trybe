@@ -1,4 +1,5 @@
-const order = {
+// Exercícíos Parte 1
+/*const order = {
   name: 'Rafael Andrade',
   phoneNumber: '11-98763-1416',
   address: {
@@ -53,4 +54,52 @@ const orderModifier = (order) => {
   console.log(send2);
 }
 
-orderModifier(newOrder);
+orderModifier(newOrder); */
+
+//Exercícíos Parte 2
+const lesson1 = {
+  materia: 'Matemática',
+  numeroEstudantes: 20,
+  professor: 'Maria Clara',
+  turno: 'manhã',
+};
+
+const lesson2 = {
+  materia: 'História',
+  numeroEstudantes: 20,
+  professor: 'Carlos',
+};
+
+const lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
+
+const changeShift = (objeto, key, value) => {
+  objeto[key] = value;
+}
+changeShift(lesson2, 'turno', 'manhã');
+
+const keyList = (objeto) => {
+  for (let i = 0; i < Object.keys(objeto).length; i += 1){
+    console.log(`${Object.keys(objeto)[i]}`);
+  }
+  
+}
+keyList(lesson3);
+
+const objectSize = (objeto) => Object.keys(objeto).length;
+console.log(objectSize(lesson3));
+
+const valueList = (objeto) => {
+  for (let i = 0; i < Object.values(objeto).length; i += 1){
+    console.log(`${Object.values(objeto)[i]}`);
+  }
+  
+}
+valueList(lesson3);
+
+const allLessons = (Object.assign({}, {lesson1, lesson2, lesson3}));
+console.log(allLessons);
