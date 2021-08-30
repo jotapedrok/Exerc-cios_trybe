@@ -103,3 +103,32 @@ valueList(lesson3);
 
 const allLessons = (Object.assign({}, {lesson1, lesson2, lesson3}));
 console.log(allLessons);
+
+const allStudents = (objeto) => {
+  let allStud = 0;
+  const array = Object.keys(objeto);
+  for (let i = 0; i < array.length; i += 1) {
+    allStud = allStud + objeto[array[i]].numeroEstudantes;
+  }
+  
+  console.log(allStud);
+}
+
+allStudents(allLessons);
+
+const getValueByNumber = (objeto, num) => console.log(Object.values(objeto)[num]);
+
+getValueByNumber(lesson2, 2);
+
+const verifyPair = (objeto, key, value) => {
+  const arrayArrays = Object.entries(objeto);
+  let istrue = false;
+  for (let i = 0; i < arrayArrays.length; i += 1) {
+    if (arrayArrays[i][0] === key && arrayArrays[i][1] === value) {
+      istrue = true;
+    }
+  }
+  return istrue;
+}
+
+console.log(verifyPair(lesson1, 'professor', 'Maria Clara'));
