@@ -8,7 +8,6 @@ function sum(a, b) {
   return a + b;
 }
 
-assert.strictEqual(sum(2, 5), 7, "is'nt equal");
-assert.strictEqual(sum(5, 5), 10, "is'nt equal");
-assert.strictEqual(sum(12, 5), 17, "is'nt equal");
-assert.throws(() => {sum('2', 4)});
+assert.strictEqual(sum(4, 5), 9, "is'nt equal");
+assert.strictEqual(sum(0, 0), 0, "is'nt equal");
+assert.throws(() => {sum('4', 5)}, /parameters must be numbers$/);
