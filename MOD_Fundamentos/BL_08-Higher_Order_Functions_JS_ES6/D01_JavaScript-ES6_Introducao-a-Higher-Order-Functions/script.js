@@ -1,4 +1,4 @@
-/* Exercícío 1
+/* Exercícío 1 */
 const newEmployees = (func) => {
   const employees = {
     id1: func('Pedro Guerra'), // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
@@ -10,14 +10,14 @@ const newEmployees = (func) => {
 
 const register = (employeName) => {
   const arrayName = employeName.split(' ');
-  const email = `${arrayName.join('').toLowerCase()}@emprise.com`;
+  const email = `${arrayName.join('_').toLowerCase()}@trybe.com`;
   return {
     nome: employeName,
     email: email,
   }
 }
 
-console.log(newEmployees(register));*/
+console.log(newEmployees(register));
 
 /*Exercício 2
 const raffle = (func, num) => {
