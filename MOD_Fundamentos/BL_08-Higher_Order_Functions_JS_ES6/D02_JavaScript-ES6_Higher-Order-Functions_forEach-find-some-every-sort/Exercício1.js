@@ -102,7 +102,7 @@ const getNamedBook = () => books.find(element => element.name.length === 26);
 assert.deepStrictEqual(getNamedBook(), expectedResult);*/
 
 //Exercício 4
-const expectedResult = [
+/*const expectedResult = [
   {
     id: 1,
     name: 'As Crônicas de Gelo e Fogo',
@@ -149,4 +149,13 @@ const expectedResult = [
 
 const booksOrderedByReleaseYearDesc = () => books.sort((elementA, elementB) => elementB.releaseYear - elementA.releaseYear);
 
-assert.deepStrictEqual(booksOrderedByReleaseYearDesc(), expectedResult);
+assert.deepStrictEqual(booksOrderedByReleaseYearDesc(), expectedResult);*/
+
+//Exercício 5
+/*const expectedResult = false;
+
+const everyoneWasBornOnSecXX = () => books.every((element) => element.author.birthYear >= 1901 && element.author.birthYear <= 2000)
+
+assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);*/
+
+//Exercício 6
