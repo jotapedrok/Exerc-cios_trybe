@@ -74,6 +74,6 @@ const expectedResult = {
   releaseYear: 1991,
 };
 
-const longestNamedBook = () => books.reduce((acc, curr) => acc.name.lengh > curr.name.length ? curr : acc)
+const longestNamedBook = () => books.reduce((acc, curr) => acc.name.lengh > curr.name.length ? curr : acc);
 
 assert.deepStrictEqual(longestNamedBook(), expectedResult);
