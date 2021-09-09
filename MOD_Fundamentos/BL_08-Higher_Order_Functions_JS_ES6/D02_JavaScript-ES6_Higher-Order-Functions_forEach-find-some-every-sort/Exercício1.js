@@ -159,8 +159,17 @@ const everyoneWasBornOnSecXX = () => books.every((element) => element.author.bir
 assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);*/
 
 //Exercício 6
-const expectedResult = true;
+/*const expectedResult = true;
 
 const someBookWasReleaseOnThe80s = () => books.some((element) => element.releaseYear >= 1980 && element.releaseYear < 1990)
 
-assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);
+assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);*/
+
+//Exercício 7
+const expectedResult = false;
+
+const authorUnique = () => books.forEach((book) => {
+  return books.some((element) => element.author.birthYear === book.author.birthYear)
+})
+
+assert.strictEqual(authorUnique(), expectedResult);
