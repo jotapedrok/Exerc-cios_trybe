@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 const uppercase = (str, callback) => {
   setTimeout(() => {
     callback(str.toUpperCase());
@@ -21,7 +23,16 @@ const findUserById = (id) => new Promise((resolve, reject) => {
 
 const getUserName = (userId) => findUserById(userId).then((user) => user.name);
 
+const getRepos = (url) => {
+  return fetch(url)
+    .then(response => response.json())
+    .then((data) => {
+      return data.map((repo) => repo.name);
+    });
+};
+
 module.exports = {
+  getRepos,
   uppercase,
   getUserName,
 }

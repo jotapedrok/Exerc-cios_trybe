@@ -1,6 +1,7 @@
 const {
   uppercase,
   getUserName,
+  getRepos,
 } = require('../src/exercicios');
 
 describe('Testes da função uppercase', () => {
@@ -28,5 +29,14 @@ describe('Testes da função "getUserName"', () => {
     } catch (e) {
       expect(e.message).toBe('User with 4 not found.');
     }
+  });
+});
+
+describe('Testes função "getRepos"', () => {
+  it('should contain "sd-01-week4-5-project-todo-list"', async () => {
+    await expect(getRepos('https://api.github.com/orgs/tryber/repos')).resolves.toContain('sd-01-week4-5-project-todo-list');
+  });
+  it('should contain "sd-01-week4-5-project-meme-generator"', async () => {
+    await expect(getRepos('https://api.github.com/orgs/tryber/repos')).resolves.toContain('sd-01-week4-5-project-meme-generator');
   });
 });
