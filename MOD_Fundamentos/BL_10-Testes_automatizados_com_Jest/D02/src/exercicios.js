@@ -23,13 +23,12 @@ const findUserById = (id) => new Promise((resolve, reject) => {
 
 const getUserName = (userId) => findUserById(userId).then((user) => user.name);
 
-const getRepos = (url) => {
-  return fetch(url)
-    .then(response => response.json())
-    .then((data) => {
-      return data.map((repo) => repo.name);
-    });
+const getRepos = async (url) => {
+  const x = await fetch(url);
+  const y = await x.json();
+  return y;
 };
+
 
 module.exports = {
   getRepos,
