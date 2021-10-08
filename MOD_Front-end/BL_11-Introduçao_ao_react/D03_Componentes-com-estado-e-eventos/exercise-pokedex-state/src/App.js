@@ -4,6 +4,11 @@ import Pokedex from './Pokedex';
 
 
 class App extends React.Component {
+  loading = () => {
+    return <div className="loading">
+        <div className="circle"></div>
+    </div>
+}
   render() {
     return (
       <div className="App">

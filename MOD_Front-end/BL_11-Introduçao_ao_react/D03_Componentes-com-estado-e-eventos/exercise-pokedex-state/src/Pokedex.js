@@ -19,10 +19,6 @@ class Pokedex extends React.Component {
     }
   }
 
-  loading = () => {
-      return <div className="loading"></div>
-  }
-
   click = (event) => {
     this.setState((lastState) => {lastState.pokeIndex = 0})
     const target = event.target;
