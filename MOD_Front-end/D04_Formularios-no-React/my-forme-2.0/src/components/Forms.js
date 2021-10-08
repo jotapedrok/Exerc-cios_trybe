@@ -20,19 +20,22 @@ class Forms extends React.Component {
     }
   }
 
-  handleChange({ target }) {
-    const { name } = target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
+  handleChange = ({ target }) => {
+    const { name, value } = target;
 
     this.setState({
       [name]: value,
     });
   }
 
+  setGender(event) {
+    console.log(event.target.value);
+  }
+
   render() {
     return (
       <form className="form">
-        <FormsPersonal handleChange={this.handleChange}/>
+        <FormsPersonal handleChange={this.handleChange} setGender={this.setGender}/>
         <FormsProfessional  handleChange={this.handleChange}/>
         <Buttons />
       </form>

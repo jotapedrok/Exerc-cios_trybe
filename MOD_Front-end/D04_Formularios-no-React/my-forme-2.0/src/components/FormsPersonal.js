@@ -33,7 +33,7 @@ class FormsPersonal extends React.Component {
   render() {
     return(
       <fieldset className="form-personal-fieldset fieldset">
-        <label for="name">
+        <label>
           Name:
           <input
           onChange={this.props.handleChange}
@@ -46,7 +46,7 @@ class FormsPersonal extends React.Component {
           />
         </label>
 
-        <label for="email">
+        <label>
           Email:
           <input
           onChange={this.props.handleChange}
@@ -59,7 +59,7 @@ class FormsPersonal extends React.Component {
           />
         </label>
 
-        <label for="cpf">
+        <label>
           CPF:
           <input
           onChange={this.props.handleChange}
@@ -72,7 +72,7 @@ class FormsPersonal extends React.Component {
           />
         </label>
 
-        <label for="address">
+        <label>
           Address:
           <input
           onChange={this.props.handleChange}
@@ -85,19 +85,19 @@ class FormsPersonal extends React.Component {
           />
         </label>
 
-        <label for="city">
+        <label>
           City:
           <input
           onChange={this.props.handleChange}
           name="city"
           id="city"
-          type="number"
+          type="text"
           className="form-city"
           maxLength="28"
           required
           />
         </label>
-        <label for="state">
+        <label>
           State:
           <select
           onChange={this.props.handleChange}
@@ -107,31 +107,32 @@ class FormsPersonal extends React.Component {
           className="form-state"
           required>
             {estados.map(estado => {
-             return (<option className={`opt-${estado}`} value={estado}>{estado}</option>)
+             return (<option key={estado} className={`opt-${estado}`} value={estado}>{estado}</option>)
           })}
           </select>
         </label>
-        <div className="form-homeType">
+        <div className="form-homeType" onChange={this.props.handleChange}>
 
           <p>Home Type:</p>
           <div className="form-radio">
-            <input
-            type="radio"
-            id="house"
-            name="home"
-            value="house"
-            checked/>
-            <label for="house">House</label>
-          </div>
+            <label>
+              <input
+              type="radio"
+              name="home"
+              value="house"
+              required/>
+              House
+            </label>
 
-          <div className="form-radio">
-            <input
-            type="radio"
-            id="apart"
-            name="home"
-            value="apart"
-            />
-            <label for="apart">Apart</label>
+            <label>
+              <input
+              type="radio"
+              name="home"
+              value="apart"
+              required
+              />
+              Apart
+            </label>
           </div>
         </div>
       </fieldset>

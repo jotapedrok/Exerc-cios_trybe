@@ -4,7 +4,7 @@ class FormsProfessional extends React.Component {
   render() {
     return (
       <fieldset className="form-profissional-fieldset fieldset">
-        <label for="resum">
+        <label>
           Curriculum Resum:
           <br/>
           <textarea
@@ -17,7 +17,7 @@ class FormsProfessional extends React.Component {
           />
         </label>
 
-        <label for="responsability">
+        <label>
           Last Job:
           <input
           onChange={this.props.handleChange}
@@ -30,7 +30,7 @@ class FormsProfessional extends React.Component {
           />
         </label>
 
-        <label for="description">
+        <label>
           Job description:
           <br/>
           <textarea
