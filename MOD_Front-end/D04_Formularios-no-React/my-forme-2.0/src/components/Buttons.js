@@ -4,8 +4,8 @@ class Buttons extends React.Component {
   render() {
     return (
       <div className="buttons">
-        <button className="send">SEND</button>
-        <button className="clear">CLEAR</button>
+        <input type="button" className="send" onClick={this.props.click} value="SEND"/>
+        <input type="button" className="clear" value="CLEAR"/>
       </div>
     )
   }
