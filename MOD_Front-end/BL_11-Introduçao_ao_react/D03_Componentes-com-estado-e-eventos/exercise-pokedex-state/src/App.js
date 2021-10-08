@@ -1,26 +1,17 @@
 import React from 'react';
 import './App.css';
-import TypeButtons from './TypeButtons';
+import Pokedex from './Pokedex';
 
 
-// class App extends React {
-//   render() {
-//     return (
-//       <div className="App">
-// //         <h1> Pokedex </h1>
-// //         <TypeButtons />
-// //     </div>
-//     )
-//   }
-// }
-
-function App() {
-  return (
-    <div className="App">
-        <h1> Pokedex </h1>
-        <TypeButtons />
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+         <h1> Pokedex </h1>
+         <Pokedex />
+      </div>
+    )
+  }
 }
 
 export default App;
