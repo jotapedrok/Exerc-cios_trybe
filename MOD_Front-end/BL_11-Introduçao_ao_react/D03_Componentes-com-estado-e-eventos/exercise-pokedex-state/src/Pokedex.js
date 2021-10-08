@@ -19,8 +19,12 @@ class Pokedex extends React.Component {
     }
   }
 
+  loading = () => {
+      return <div className="loading"></div>
+  }
+
   click = (event) => {
-    this.setState({pokeIndex: 0})
+    this.setState((lastState) => {lastState.pokeIndex = 0})
     const target = event.target;
     const exAble = Array.from(target.parentNode.children).find((element) => element.classList.contains('able'));
     if (exAble && exAble !== target) { 
@@ -100,19 +104,19 @@ class Pokedex extends React.Component {
       <div className="main-app">
         <div className="pokedex">
                 <div className="buttons">
-                    <button className="beforeBtn" onClick={this.clickLeftBtn}>ᐊ</button>
-                    <button className="nextBtn" onClick={this.clickRightBtn}>ᐅ</button>
+                    <button className="beforeBtn arrowBtn" onClick={this.clickLeftBtn}>ᐊ</button>
+                    <button className="nextBtn arrowBtn" onClick={this.clickRightBtn}>ᐅ</button>
                 </div>
                 {this.state.filter ? this.filterPokes() : this.allPokes()}
-            </div>
-      <section className="type-buttons">
+        </div>
+        <section className="type-buttons">
         {types.map(type => {
           return (
             <button key={type} onClick={this.click} className={`${type}type-btn typeBtn`}>{type}</button>
             )
           })}
-      </section>
-          </div>
+         </section>
+     </div>
     )
   }
 }

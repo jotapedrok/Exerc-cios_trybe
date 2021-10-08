@@ -1,3 +1,95 @@
+@font-face {
+  font-family: 'Dogica Pixel';
+  src: url(./fonts/Dogica/OTF/dogicapixel.otf) format('opentype'), url(./fonts/Dogica/TTF/dogicapixel.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
+
 .able {
   background-color: blue;
+}
+
+.first {
+  color: white;
+}
+
+.last {
+  color: white;
+}
+
+.main-app {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pokedex {
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon img {
+  width: 150px;
+}
+
+.pokemon p {
+  line-height: 15px;
+  font-size: 12px;
+  font-family: 'Dogica Pixel', sans-serif;
+  text-align: start;
+  color: #0f0f0f
+}
+
+.pokemon {
+  background-color: #384d38bc;
+}
+
+.arrowBtn {
+  border-radius: 8px;
+  width: 50px;
+  height: 30px;
+  margin: 0 15px;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: #353535;
+  color: #fff;
+}
+
+.typeBtn {
+  margin: 5px 10px;
+  width: 100px;
+  height: 35px;
+  border-radius: 15px;
+  font-family: 'Chakra Petch', sans-serif;
+  border: 0.5px solid #000;
+}
+
+.Electrictype-btn {
+  background-color: #F8D030;
+}
+
+.Firetype-btn {
+  background-color: #F08030;
+}
+
+.Bugtype-btn {
+  background-color: #A8B820;
+}
+
+.Poisontype-btn {
+  background-color: #A255A0;
+}
+
+.Psychictype-btn {
+  background-color: #EC5F88;
+}
+
+.Normaltype-btn {
+  background-color: #A8A878;
+}
+
+.Dragontype-btn {
+  background-color: #7B73F8;
 }
