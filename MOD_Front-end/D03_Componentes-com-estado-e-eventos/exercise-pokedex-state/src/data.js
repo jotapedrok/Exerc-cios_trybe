@@ -97,7 +97,18 @@ const pokemons = [
       },
       image: "https://cdn2.bulbagarden.net/upload/2/2c/Spr_5b_148.png",
       moreInfo: "https://bulbapedia.bulbagarden.net/wiki/Dragonair_(Pok%C3%A9mon)"
-  }
+  },
+  {
+    id: 147,
+    name: "Dratini",
+    type: 'Dragon',
+    averageWeight: {
+        value: "3.3",
+        measurementUnit: "kg"
+    },
+    image: "https://cdn2.bulbagarden.net/upload/3/36/Spr_5b_147.png",
+    moreInfo: "https://bulbapedia.bulbagarden.net/wiki/Dratini_(Pok%C3%A9mon)"
+}
 ];
 
 export default pokemons;

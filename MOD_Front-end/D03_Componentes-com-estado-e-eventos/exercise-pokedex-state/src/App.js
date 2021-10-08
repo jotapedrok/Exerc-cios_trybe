@@ -1,13 +1,24 @@
 import React from 'react';
 import './App.css';
-import pokemons from './data';
-import Pokedex from './Pokedex';
+import TypeButtons from './TypeButtons';
+
+
+// class App extends React {
+//   render() {
+//     return (
+//       <div className="App">
+// //         <h1> Pokedex </h1>
+// //         <TypeButtons />
+// //     </div>
+//     )
+//   }
+// }
 
 function App() {
   return (
     <div className="App">
-      <h1> Pokedex </h1>
-      <Pokedex pokemons={pokemons} />
+        <h1> Pokedex </h1>
+        <TypeButtons />
     </div>
   );
 }
