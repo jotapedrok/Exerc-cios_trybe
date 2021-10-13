@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
 
 .able {
-  background-color: blue;
+  background-color: rgba(65, 65, 65, 0.808) !important;
 }
 
 .first {
