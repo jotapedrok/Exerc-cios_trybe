@@ -2,6 +2,8 @@ version: '3'
 services:
   ghost-blog:
     image: ghost:1-alpine
+    networks:
+      - my-network
     ports:
       - 2368:2368
     depends_on:
@@ -15,5 +17,17 @@ services:
 
   db:
     image: mysql:5.7
+    networks:
+      - my-network
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - ${PWD}/database:/var/lib/mysql
+
+networks:
+  my-network:
+      driver: bridge
+
+volumes:
+  mysql_data:
+      driver: local
