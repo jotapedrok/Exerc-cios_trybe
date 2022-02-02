@@ -1,0 +1,10 @@
+version: '3'
+services:
+  exercise-5-app:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - 6000:3000
+    image: app:react
+    container_name: exercise-5-container
