@@ -1,0 +1,16 @@
+{
+  "name": "calc-imc",
+  "version": "1.0.0",
+  "description": "script to calculate imc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "imc": "node imc.js",
+    "velocidade": "node velocidade.js"
+  },
+  "author": "Jota Aguiar",
+  "license": "ISC",
+  "devDependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
