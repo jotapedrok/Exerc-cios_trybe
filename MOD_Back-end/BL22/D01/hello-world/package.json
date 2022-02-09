@@ -8,5 +8,8 @@
     "start": "node index.js"
   },
   "author": "Jota-Aguiar",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
