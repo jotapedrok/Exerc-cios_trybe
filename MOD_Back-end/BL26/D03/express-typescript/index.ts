@@ -1,6 +1,7 @@
 import express, {NextFunction, Request, Response} from 'express';
 import { StatusCodes } from 'http-status-codes';
 import 'express-async-errors';
+import BooksRoutes from './routes/books.routes';
 
 const PORT = 8000;
 
