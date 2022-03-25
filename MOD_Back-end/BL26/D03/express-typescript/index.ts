@@ -13,6 +13,8 @@ app.get('/', (req: Request, res: Response) => {
   return res.status(StatusCodes.OK).send('Express + TypeScript');
 });
 
+app.use('/', BooksRoutes);
+
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   const { name, message, details } = err as any;
   console.log(`name: ${name}`);
