@@ -1,8 +1,13 @@
-export default class Student {
+import Person from "./Person";
+
+export default class Student extends Person{
+  private _enrollment: string = String();
   private _workGrades: number[];
   private _examsGrades: number[];
   
-  constructor(private _name: string, private _enrollment: string) {
+  constructor(name: string, birthDate: Date) {
+    super(name, birthDate);
+    this.enrollment = this.generateEnrollment();
     this._examsGrades = [];
     this._workGrades = [];
   }
@@ -13,14 +18,6 @@ export default class Student {
 
   public set enrollment(value: string) {
     this._enrollment = value;
-  };
-
-  public get name(): string {
-    return this._name;
-  };
-
-  public set name(value: string) {
-    this._name = value;
   };
 
   public get workGrades(): number[] {
@@ -55,5 +52,11 @@ export default class Student {
     const sumGrades = this.sumGrades();
     const average = sumGrades / (this.examsGrades.length + this.workGrades.length);
     return average;
+  }
+
+  generateEnrollment(): string {
+    const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
+
+    return `STU${randomStr}`;
   }
 }
