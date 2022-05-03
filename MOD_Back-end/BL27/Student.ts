@@ -1,6 +1,7 @@
+import Enrollable from "./Enrollable.interface";
 import Person from "./Person";
 
-export default class Student extends Person{
+export default class Student extends Person implements Enrollable {
   private _enrollment: string = String();
   private _workGrades: number[];
   private _examsGrades: number[];

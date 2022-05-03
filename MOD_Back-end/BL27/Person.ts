@@ -1,4 +1,4 @@
-export default class Person {
+export default abstract class Person {
   constructor(private _name: string, private _birthDate: Date) { }
 
   public get birthDate(): Date {
